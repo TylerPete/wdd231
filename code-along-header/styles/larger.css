@@ -16,4 +16,21 @@
         display: none;
     }
 
+    .navigation {
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navigation>ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 24px;
+    }
+
+    .navigation>ul>li>a {
+        text-decoration: none;
+        color: red;
+        border: none;
+    }
 }

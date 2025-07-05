@@ -41,3 +41,38 @@ header span {
 .hamburger.show::before {
     content: "\00D7";
 }
+
+.navigation {
+    display: none;
+}
+
+.navigation>ul {
+    list-style: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation>ul>li>a {
+    display: block;
+    text-decoration: none;
+    color: red;
+    padding: 0.82rem 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation li.current {
+    background-color: #444;
+}
+
+.navigation a:hover {
+    background-color: #777;
+}
+
+h1 {
+    margin-left: 10px;
+}
