@@ -30,7 +30,6 @@
 
     .navigation>ul>li>a {
         text-decoration: none;
-        color: red;
         border: none;
     }
 }

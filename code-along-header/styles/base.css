@@ -48,7 +48,7 @@ header span {
 
 .navigation>ul {
     list-style: none;
-    background-color: black;
+    background-color: red;
     margin: 0;
     padding: 0;
 }
@@ -56,7 +56,7 @@ header span {
 .navigation>ul>li>a {
     display: block;
     text-decoration: none;
-    color: red;
+    color: white;
     padding: 0.82rem 10px;
     border-bottom: 1px solid #ddd;
 }
@@ -66,13 +66,37 @@ header span {
 }
 
 .navigation li.current {
-    background-color: #444;
+    background-color: #cc0000;
 }
 
 .navigation a:hover {
-    background-color: #777;
+    background-color: #cc0000;
 }
 
 h1 {
     margin-left: 10px;
+}
+
+/**** FOOTER****/
+
+footer {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 1rem 10px;
+}
+
+.icon-flexbox {
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+a {
+    color: white;
+}
+
+img {
+    color: white;
 }
