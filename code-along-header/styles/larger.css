@@ -26,6 +26,7 @@
         flex-direction: row;
         list-style: none;
         gap: 24px;
+        justify-content: space-around;
     }
 
     .navigation>ul>li>a {
