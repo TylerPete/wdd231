@@ -1,1 +1,23 @@
-/* meow */
+@media only screen and (min-width: 38rem) {
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navigation li {
+        border: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+}

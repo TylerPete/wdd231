@@ -2,5 +2,99 @@
 
 :root {
     --the-red: #8C3324;
+    --the-dark-red: #541f16;
     --the-white: #F9F5EC;
+    --the-black: #333745;
+}
+
+* {
+    margin: 0;
+}
+
+header {
+    background-color: var(--the-black);
+    color: var(--the-white);
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    max-width: 800px;
+    padding: 0.5rem 0 0.5rem 0;
+    column-gap: 20px;
+    font-size: 1.2rem;
+    align-items: end;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.hamburger {
+    border: none;
+    background-color: inherit;
+    color: var(--the-white);
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.4rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 2rem;
+}
+
+.navigation {
+    background-color: var(--the-red);
+    display: none;
+    max-width: 800px;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--the-white);
+    padding-left: 10px;
+}
+
+.navigation ul {
+    padding: 0;
+}
+
+.navigation li {
+    list-style: none;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--the-white);
+    text-align: left;
+}
+
+.navigation li:hover {
+    background-color: var(--the-dark-red);
+}
+
+h1 {
+    padding-left: 10px;
+}
+
+.navigation li.current {
+    background-color: var(--the-dark-red);
+}
+
+footer {
+    background-color: var(--the-black);
+    color: var(--the-white);
+    text-align: center;
+}
+
+.icon-flexbox {
+    padding: 10px 0;
+}
+
+footer p {
+    padding: 0.2rem 0;
 }
