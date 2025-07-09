@@ -77,12 +77,34 @@ header img {
     background-color: var(--the-dark-red);
 }
 
+.navigation li.current {
+    background-color: var(--the-dark-red);
+}
+
 h1 {
     padding-left: 10px;
 }
 
-.navigation li.current {
-    background-color: var(--the-dark-red);
+.section-grid {
+    display: grid;
+    max-width: 800px;
+}
+
+.section-grid section {
+    margin: 10px;
+    background-color: var(--the-red);
+    color: var(--the-white);
+    line-height: 1.4rem;
+}
+
+.section-grid h2 {
+    background-color: var(--the-black);
+    padding: 10px;
+}
+
+.section-grid p,
+.section-grid img {
+    padding: 10px;
 }
 
 footer {
