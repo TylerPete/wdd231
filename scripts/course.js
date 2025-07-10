@@ -92,6 +92,7 @@ function selectCourses(courseType) {
 }
 
 function displayCourseCards(theCourses) {
+    courseGrid.replaceChildren();
     let totalCredits = 0;
 
     theCourses.forEach(function (course, index) {

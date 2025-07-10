@@ -61,6 +61,7 @@ header img {
     text-decoration: none;
     color: inherit;
     padding-left: 10px;
+    line-height: 44px;
 }
 
 .navigation ul {
@@ -69,11 +70,12 @@ header img {
 
 .navigation li {
     list-style: none;
-    padding: 10px 0 10px 0;
+    /* padding: 10px 0 10px 0; */
     border-top: 1px solid var(--the-white);
     text-align: left;
     color: var(--the-white);
     cursor: pointer;
+    height: 44px;
 }
 
 .navigation li:hover {
