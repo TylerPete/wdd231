@@ -34,6 +34,7 @@ header img {
     border: none;
     background-color: inherit;
     color: var(--the-white);
+    cursor: pointer;
 }
 
 .hamburger::before {
@@ -72,6 +73,7 @@ header img {
     border-top: 1px solid var(--the-white);
     text-align: left;
     color: var(--the-white);
+    cursor: pointer;
 }
 
 .navigation li:hover {
@@ -104,6 +106,11 @@ h1 {
     line-height: 1.4rem;
 }
 
+section:nth-child(3) {
+    background-color: inherit;
+
+}
+
 .section-grid section:nth-child(2) {
     text-align: center;
 }
@@ -117,6 +124,32 @@ h1 {
 .section-grid img {
     padding: 10px;
 }
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+}
+
+.button-grid button {
+    margin: 5px;
+    border: 2px solid var(--the-black);
+    border-radius: 6px;
+    background: linear-gradient(var(--the-red), var(--the-dark-red));
+    color: var(--the-white);
+    cursor: pointer;
+}
+
+.button-grid button:hover {
+    background: var(--the-white);
+    color: var(--the-dark-red);
+}
+
+/* .button-grid button.selected {
+    stuff here
+} */
+
+
 
 footer {
     background-color: var(--the-black);
