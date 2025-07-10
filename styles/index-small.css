@@ -58,7 +58,7 @@ header img {
 
 .navigation a {
     text-decoration: none;
-    color: var(--the-white);
+    color: inherit;
     padding-left: 10px;
 }
 
@@ -71,14 +71,21 @@ header img {
     padding: 0.5rem 0;
     border-top: 1px solid var(--the-white);
     text-align: left;
+    color: var(--the-white);
 }
 
 .navigation li:hover {
-    background-color: var(--the-dark-red);
+    background-color: var(--the-white);
+    color: var(--the-red);
 }
 
 .navigation li.current {
     background-color: var(--the-dark-red);
+}
+
+.navigation li.current:hover {
+    background-color: var(--the-white);
+    color: var(--the-red);
 }
 
 h1 {
@@ -95,6 +102,10 @@ h1 {
     background-color: var(--the-red);
     color: var(--the-white);
     line-height: 1.4rem;
+}
+
+.section-grid section:nth-child(2) {
+    text-align: center;
 }
 
 .section-grid h2 {
