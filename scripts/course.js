@@ -82,24 +82,42 @@ const courseGrid = document.querySelector("#crs-grid");
 const buttonList = document.querySelectorAll(".course-butt");
 const numCreditsSpan = document.querySelector("#num-credits");
 
+displayCourseCards(courses);
+
 buttonList.forEach(function (button, index) {
     button.addEventListener("click", () => selectCourses(button.textContent));
 });
 
 function selectCourses(courseType) {
-    let theCourses = courses.filter((course) => course.subject == courseType);
+    let theCourses;
+
+    if (courseType.toLowerCase() == "all") {
+        theCourses = courses;
+    }
+    else {
+        theCourses = courses.filter((course) => course.subject == courseType);
+    }
+
     displayCourseCards(theCourses);
 }
 
 function displayCourseCards(theCourses) {
     courseGrid.replaceChildren();
-    let totalCredits = 0;
 
     theCourses.forEach(function (course, index) {
+        let completed = course.completed;
+        let checkmark = "";
+
+        if (completed) { checkmark = "✓ " };
+
         const newCourseCard = document.createElement("div");
         newCourseCard.classList.add("course-card");
-        newCourseCard.textContent = `${course.subject} ${course.number}`;
+        newCourseCard.textContent = `${checkmark} ${course.subject} ${course.number}`;
 
         courseGrid.appendChild(newCourseCard);
     });
+
+    let totalCredits = theCourses.reduce((accumulator, currentCourse) => accumulator + currentCourse.credits, 0);
+
+    numCreditsSpan.textContent = totalCredits;
 }
