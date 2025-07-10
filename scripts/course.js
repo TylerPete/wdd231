@@ -83,7 +83,7 @@ const buttonList = document.querySelectorAll(".course-butt");
 const numCreditsSpan = document.querySelector("#num-credits");
 
 buttonList.forEach(function (button, index) {
-    button.addEventListener("click", selectCourses(button.textContent));
+    button.addEventListener("click", () => selectCourses(button.textContent));
 });
 
 function selectCourses(courseType) {
@@ -97,7 +97,7 @@ function displayCourseCards(theCourses) {
     theCourses.forEach(function (course, index) {
         const newCourseCard = document.createElement("div");
         newCourseCard.classList.add("course-card");
-        newCourseCard.textContent = course.subject;
+        newCourseCard.textContent = `${course.subject} ${course.number}`;
 
         courseGrid.appendChild(newCourseCard);
     });
