@@ -70,7 +70,6 @@ header img {
 
 .navigation li {
     list-style: none;
-    /* padding: 10px 0 10px 0; */
     border-top: 1px solid var(--the-white);
     text-align: left;
     color: var(--the-white);
@@ -98,6 +97,7 @@ h1 {
 
 .section-grid {
     display: grid;
+    grid-template-columns: 1fr;
     max-width: 800px;
 }
 
@@ -110,7 +110,6 @@ h1 {
 
 section:nth-child(3) {
     background-color: inherit;
-
 }
 
 .section-grid section:nth-child(2) {
