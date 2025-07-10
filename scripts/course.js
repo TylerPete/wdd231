@@ -108,10 +108,14 @@ function displayCourseCards(theCourses) {
         let completed = course.completed;
         let checkmark = "";
 
-        if (completed) { checkmark = "✓ " };
-
         const newCourseCard = document.createElement("div");
         newCourseCard.classList.add("course-card");
+
+        if (completed) {
+            checkmark = "✓ ";
+            newCourseCard.classList.add("completed");
+        }
+
         newCourseCard.textContent = `${checkmark} ${course.subject} ${course.number}`;
 
         courseGrid.appendChild(newCourseCard);

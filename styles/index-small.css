@@ -156,13 +156,18 @@ section:nth-child(3) {
     grid-template-columns: 1fr;
 }
 
-.course-grid div {
+.course-card {
     margin: 5px;
     text-align: center;
     border: 1px solid var(--the-black);
     color: var(--the-black);
     background-color: var(--the-white);
     padding: 0.25rem 0;
+}
+
+.course-card.completed {
+    background-color: var(--the-black);
+    color: var(--the-white);
 }
 
 
