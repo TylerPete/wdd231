@@ -170,6 +170,10 @@ section:nth-child(3) {
     color: var(--the-white);
 }
 
+.num-credits-desc {
+    color: var(--the-black);
+    text-align: center;
+}
 
 footer {
     background-color: var(--the-black);
