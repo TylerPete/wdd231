@@ -184,6 +184,14 @@ footer {
 
 .icon-flexbox {
     padding: 10px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.icon-flexbox img {
+    height: 44px;
+    width: auto;
 }
 
 footer p {
