@@ -100,10 +100,14 @@ h1 {
     padding-left: 10px;
 }
 
+main {
+    max-width: 800px;
+}
+
 .section-grid {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 800px;
+    gap: 10px;
 }
 
 .section-grid section {
