@@ -7,9 +7,12 @@
     --the-black: #333745;
 }
 
-* {
-    margin: 0;
+*,
+*::before,
+*::after {
+    margin: 0 auto;
     font-family: Lato;
+    box-sizing: border-box;
 }
 
 header {
@@ -92,6 +95,7 @@ header img {
     color: var(--the-red);
 }
 
+
 h1 {
     padding-left: 10px;
 }
@@ -103,7 +107,7 @@ h1 {
 }
 
 .section-grid section {
-    margin: 10px;
+    margin: 10px 0;
     background-color: var(--the-red);
     color: var(--the-white);
     line-height: 1.4rem;
@@ -124,7 +128,9 @@ section:nth-child(3) {
 
 .section-grid p,
 .section-grid img {
-    padding: 10px;
+    box-sizing: border-box;
+    max-width: 92%;
+    padding: 10px 0;
 }
 
 .button-grid {
@@ -147,10 +153,6 @@ section:nth-child(3) {
     background: var(--the-white);
     color: var(--the-dark-red);
 }
-
-/* .button-grid button.selected {
-    stuff here
-} */
 
 .course-grid {
     display: grid;
