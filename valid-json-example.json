@@ -1,0 +1,28 @@
+{
+    "familyName": "Peterson",
+    "dateMovedIn": "06/01/2001",
+    "numberOfPeople": 7,
+    "visitedByBishopric": false,
+    "familyMembers": [
+        {
+            "name": "Eric",
+            "gender": "male",
+            "birthdate": "09/20/1967"
+        },
+        {
+            "name": "Amy",
+            "gender": "female",
+            "birthdate": "11/13/1971"
+        },
+        {
+            "name": "Tyler",
+            "gender": "male",
+            "birthdate": "09/22/1995"
+        },
+        {
+            "name": "Spencer",
+            "gender": "male",
+            "birthdate": "01/11/1997"
+        }
+    ]
+}
