@@ -1,1 +1,36 @@
-/*meow*/
+* {
+    margin: 0 auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+section {
+    border: 2px solid darkblue;
+    background-color: #B9B9CA;
+    max-width: 400px;
+    padding: 1rem;
+}
+
+section img {
+    box-shadow: 6px 4px 6px black;
+    max-width: 90%;
+    height: auto;
+}
+
+h1 {
+    color: #504E91;
+    font-family: Acme;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #504E91;
+    font-family: Acme;
+    font-size: 2rem;
+}
