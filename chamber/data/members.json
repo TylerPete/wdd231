@@ -1,65 +1,65 @@
 [
     {
-        "name": "blah",
-        "address": "123 blah",
-        "phone": "515 blah",
-        "url": "www.blah",
+        "name": "Walmart",
+        "address": "1515 SE Marshall St",
+        "phone": "515-432-2416",
+        "url": "https://www.walmart.com/",
         "imageFile": "blah",
-        "membershipLevel": "1blah",
+        "membershipLevel": "3",
+        "opened": "2013"
+    },
+    {
+        "name": "Walters Sanitary Service",
+        "address": "1424 W Mamie Eisenhower Ave",
+        "phone": "515-432-2866",
+        "url": "https://www.walterssanitary.com",
+        "imageFile": "blah",
+        "membershipLevel": "2",
+        "opened": "1929"
+    },
+    {
+        "name": "Saints Avenue Cafe",
+        "address": "1312 S Story Street",
+        "phone": "515-432-7399",
+        "url": "https://saintsavenuecafeia.com/",
+        "imageFile": "blah",
+        "membershipLevel": "1",
+        "opened": 1992
+    },
+    {
+        "name": "Kruck Plumbing & Heating",
+        "address": "734 7th Street",
+        "phone": "515-432-2210",
+        "url": "https://www.kruckph.com/",
+        "imageFile": "blah",
+        "membershipLevel": "2",
+        "opened": "1941"
+    },
+    {
+        "name": "iHome Realty",
+        "address": "619 Story Street",
+        "phone": "515-432-2353",
+        "url": "https://homewithihome.com/",
+        "imageFile": "blah",
+        "membershipLevel": "2",
         "other": "other blah"
     },
     {
-        "name": "blah",
-        "address": "123 blah",
-        "phone": "515 blah",
-        "url": "www.blah",
+        "name": "Ericson Public Library",
+        "address": "702 Greene St",
+        "phone": "515-432-3727",
+        "url": "https://www.boone.lib.ia.us/",
         "imageFile": "blah",
-        "membershipLevel": "1blah",
-        "other": "other blah"
+        "membershipLevel": "1",
+        "opened": "1901"
     },
     {
-        "name": "blah",
-        "address": "123 blah",
-        "phone": "515 blah",
-        "url": "www.blah",
+        "name": "Members 1st Credit Union",
+        "address": "1021 S Marshall Street",
+        "phone": "515-432-1062",
+        "url": "https://www.members1st.com/",
         "imageFile": "blah",
-        "membershipLevel": "1blah",
-        "other": "other blah"
-    },
-    {
-        "name": "blah",
-        "address": "123 blah",
-        "phone": "515 blah",
-        "url": "www.blah",
-        "imageFile": "blah",
-        "membershipLevel": "1blah",
-        "other": "other blah"
-    },
-    {
-        "name": "blah",
-        "address": "123 blah",
-        "phone": "515 blah",
-        "url": "www.blah",
-        "imageFile": "blah",
-        "membershipLevel": "1blah",
-        "other": "other blah"
-    },
-    {
-        "name": "blah",
-        "address": "123 blah",
-        "phone": "515 blah",
-        "url": "www.blah",
-        "imageFile": "blah",
-        "membershipLevel": "1blah",
-        "other": "other blah"
-    },
-    {
-        "name": "blah",
-        "address": "123 blah",
-        "phone": "515 blah",
-        "url": "www.blah",
-        "imageFile": "blah",
-        "membershipLevel": "1blah",
-        "other": "other blah"
+        "membershipLevel": "3",
+        "opened": "1964"
     }
 ]
