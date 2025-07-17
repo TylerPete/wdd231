@@ -1,3 +1,65 @@
-{
-    "blah": "blah"
-}
+[
+    {
+        "name": "blah",
+        "address": "123 blah",
+        "phone": "515 blah",
+        "url": "www.blah",
+        "imageFile": "blah",
+        "membershipLevel": "1blah",
+        "other": "other blah"
+    },
+    {
+        "name": "blah",
+        "address": "123 blah",
+        "phone": "515 blah",
+        "url": "www.blah",
+        "imageFile": "blah",
+        "membershipLevel": "1blah",
+        "other": "other blah"
+    },
+    {
+        "name": "blah",
+        "address": "123 blah",
+        "phone": "515 blah",
+        "url": "www.blah",
+        "imageFile": "blah",
+        "membershipLevel": "1blah",
+        "other": "other blah"
+    },
+    {
+        "name": "blah",
+        "address": "123 blah",
+        "phone": "515 blah",
+        "url": "www.blah",
+        "imageFile": "blah",
+        "membershipLevel": "1blah",
+        "other": "other blah"
+    },
+    {
+        "name": "blah",
+        "address": "123 blah",
+        "phone": "515 blah",
+        "url": "www.blah",
+        "imageFile": "blah",
+        "membershipLevel": "1blah",
+        "other": "other blah"
+    },
+    {
+        "name": "blah",
+        "address": "123 blah",
+        "phone": "515 blah",
+        "url": "www.blah",
+        "imageFile": "blah",
+        "membershipLevel": "1blah",
+        "other": "other blah"
+    },
+    {
+        "name": "blah",
+        "address": "123 blah",
+        "phone": "515 blah",
+        "url": "www.blah",
+        "imageFile": "blah",
+        "membershipLevel": "1blah",
+        "other": "other blah"
+    }
+]
