@@ -4,7 +4,7 @@
         "address": "1515 SE Marshall St",
         "phone": "515-432-2416",
         "url": "https://www.walmart.com/",
-        "imageFile": "blah",
+        "imageFile": "https://raw.githubusercontent.com/TylerPete/wdd231/refs/heads/main/chamber/images/walmart-2-1.jpeg",
         "membershipLevel": "3",
         "opened": "2013"
     },
