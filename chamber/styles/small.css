@@ -48,6 +48,11 @@ header button {
 
 nav {
     background-color: var(--the-green);
+    display: none;
+}
+
+.navigation.show {
+    display: block;
 }
 
 nav ul {

@@ -1,7 +1,12 @@
 const currentYear = document.querySelector("#current-year");
 const lastModified = document.querySelector("#last-modified");
 
+const navBar = document.querySelector("#nav-bar");
+const hamburger = document.querySelector("#ham-btn");
 
+hamburger.addEventListener("click", () => {
+    navBar.classList.toggle("show");
+});
 
 const today = new Date();
 currentYear.textContent = today.getFullYear();
