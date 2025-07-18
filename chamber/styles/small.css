@@ -99,14 +99,43 @@ fieldset {
     border: 2px solid var(--the-gray-black);
 }
 
-footer {
-    /* display: grid;
-    grid-template-columns: 24px auto 6px 44px; */
+.members-div {
+    display: grid;
+    grid-template-columns: repeat(minmax(200px, 1fr));
+}
+
+.member-div {
+    background-color: var(--the-green);
+    border: 2px solid var(--the-gray-black);
+    border-radius: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.member-div h2 {
+    text-align: center;
     background-color: var(--the-gray-black);
     color: white;
-    /* padding: 0.5rem 0; */
+    grid-column: 1/3;
+    width: 100%;
+}
+
+.member-div img {
+    max-width: 90%;
+    margin: 10px auto;
+    grid-column: 1/2;
+}
+
+.member-div p {
+    margin: 0.2rem 0;
+    grid-column: 2/3;
+}
+
+footer {
+    background-color: var(--the-gray-black);
+    color: white;
     font-size: 1.2rem;
-    /* column-gap: 20px; */
     align-items: center;
 }
 

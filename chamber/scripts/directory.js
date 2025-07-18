@@ -43,8 +43,18 @@ async function getMembers() {
         const response = await fetch(path);
         const data = await response.json();
         console.log(data); //TEMPORARY
+        displayMembers(data);
+
     } catch (error) {
         console.error("Error fetching members data:", error);
+    }
+}
+
+function displayMembers(data) {
+    if (gridDisplay) {
+        //code for generating grid member cards
+    } else {
+        ///code for generating member list
     }
 }
 
