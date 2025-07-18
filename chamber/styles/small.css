@@ -40,7 +40,7 @@ header button {
     border: none;
 }
 
-#ham-btn::before {
+.hamburger::before {
     content: "\2630";
     color: white;
     font-size: 1.4rem;
