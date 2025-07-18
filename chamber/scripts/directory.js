@@ -1,4 +1,20 @@
 // Copyright year and last modification
+let gridDisplay = true;
+const gridRadio = document.querySelector("#grid-select");
+const listRadio = document.querySelector("#list-select");
+
+gridRadio.addEventListener("change", () => {
+    if (gridRadio.checked) {
+        gridDisplay = true;
+    }
+});
+
+listRadio.addEventListener("change", () => {
+    if (listRadio.checked) {
+        gridDisplay = false;
+    }
+});
+
 const currentYear = document.querySelector("#current-year");
 const lastModified = document.querySelector("#last-modified");
 
@@ -23,7 +39,13 @@ hamburger.addEventListener("click", () => {
 const path = "./data/members.json";
 
 async function getMembers() {
-    const response = await fetch(path);
-    const data = await response.json();
-    console.log(data); //TEMPORARY
+    try {
+        const response = await fetch(path);
+        const data = await response.json();
+        console.log(data); //TEMPORARY
+    } catch (error) {
+        console.error("Error fetching members data:", error);
+    }
 }
+
+getMembers();
