@@ -101,11 +101,11 @@ fieldset {
 
 .members-div {
     display: grid;
-    grid-template-columns: repeat(minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(auto-fit, 1fr);
 }
 
-.member-div {
+.member-div.grid {
     background-color: var(--the-green);
     border: 2px solid var(--the-gray-black);
     border-radius: 5px;
@@ -113,9 +113,10 @@ fieldset {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto-fit, 1fr;
+    min-width: 260px;
 }
 
-.member-div h2 {
+.member-div.grid h2 {
     text-align: center;
     background-color: var(--the-gray-black);
     color: white;
@@ -124,7 +125,7 @@ fieldset {
     width: 100%;
 }
 
-.member-div span {
+.member-div.grid span {
     text-align: center;
     background-color: var(--the-gray-black);
     color: white;
@@ -135,7 +136,7 @@ fieldset {
     padding-bottom: 4px;
 }
 
-.member-div img {
+.member-div.grid img {
     min-width: 80px;
     max-width: 90%;
     margin: 10px auto;
@@ -144,7 +145,7 @@ fieldset {
     align-self: center;
 }
 
-.member-div p {
+.member-div.grid p {
     margin: 0.2rem 0;
     grid-column: 2/3;
 }
