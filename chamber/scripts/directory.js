@@ -1,12 +1,6 @@
+// Copyright year and last modification
 const currentYear = document.querySelector("#current-year");
 const lastModified = document.querySelector("#last-modified");
-
-const navBar = document.querySelector("#nav-bar");
-const hamburger = document.querySelector("#ham-btn");
-
-hamburger.addEventListener("click", () => {
-    navBar.classList.toggle("show");
-});
 
 const today = new Date();
 currentYear.textContent = today.getFullYear();
@@ -16,3 +10,20 @@ lastModified.textContent = `${new Intl.DateTimeFormat("en-US",
     {
         dateStyle: "short", timeStyle: "medium"
     }).format(lastModifiedDate)}`;
+
+// Navigation/hamburger button functionality
+const navBar = document.querySelector("#nav-bar");
+const hamburger = document.querySelector("#ham-btn");
+
+hamburger.addEventListener("click", () => {
+    navBar.classList.toggle("show");
+});
+
+// Fetching of the CoC members data
+const path = "./data/members.json";
+
+async function getMembers() {
+    const response = await fetch(path);
+    const data = await response.json();
+    console.log(data); //TEMPORARY
+}
