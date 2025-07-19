@@ -5,7 +5,7 @@
         "phone": "515-432-2416",
         "url": "https://www.walmart.com/",
         "imageFile": "./images/walmart-2-1.jpeg",
-        "membershipLevel": "3",
+        "membershipLevel": 3,
         "opened": "2013"
     },
     {
@@ -14,7 +14,7 @@
         "phone": "515-432-2866",
         "url": "https://www.walterssanitary.com",
         "imageFile": "./images/walters-2-1.png",
-        "membershipLevel": "2",
+        "membershipLevel": 2,
         "opened": "1929"
     },
     {
@@ -23,7 +23,7 @@
         "phone": "515-432-7399",
         "url": "https://saintsavenuecafeia.com/",
         "imageFile": "./images/saints-2-1.png",
-        "membershipLevel": "1",
+        "membershipLevel": 1,
         "opened": 1992
     },
     {
@@ -32,7 +32,7 @@
         "phone": "515-432-2210",
         "url": "https://www.kruckph.com/",
         "imageFile": "./images/kruck-2-1.png",
-        "membershipLevel": "2",
+        "membershipLevel": 2,
         "opened": "1941"
     },
     {
@@ -41,7 +41,7 @@
         "phone": "515-432-2353",
         "url": "https://homewithihome.com/",
         "imageFile": "./images/iHome-2-1.jpg",
-        "membershipLevel": "2",
+        "membershipLevel": 2,
         "other": "other blah"
     },
     {
@@ -50,7 +50,7 @@
         "phone": "515-432-3727",
         "url": "https://www.boone.lib.ia.us/",
         "imageFile": "./images/ericson-2-1.png",
-        "membershipLevel": "1",
+        "membershipLevel": 1,
         "opened": "1901"
     },
     {
@@ -59,7 +59,7 @@
         "phone": "515-432-1062",
         "url": "https://www.members1st.com/",
         "imageFile": "./images/members-2-1.png",
-        "membershipLevel": "3",
+        "membershipLevel": 3,
         "opened": "1964"
     }
 ]
