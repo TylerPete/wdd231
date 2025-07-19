@@ -195,10 +195,8 @@ h3 {
 
 .icon-flexbox {
     display: flex;
-}
-
-.icon-flexbox {
-    max-width: 75%;
+    justify-content: space-around;
+    margin: 0 5rem;
 }
 
 .icon-flexbox img {

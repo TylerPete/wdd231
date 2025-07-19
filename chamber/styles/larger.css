@@ -22,4 +22,17 @@
         text-align: center;
         border-right: 1px solid white;
     }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer div:first-child {
+        word-break: break-word;
+    }
+
+    .icon-flexbox {
+        margin: 0 0;
+    }
 }
