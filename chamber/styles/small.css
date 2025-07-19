@@ -151,6 +151,8 @@ fieldset {
 .member-div.grid p {
     margin: 0.2rem 0;
     grid-column: 2/3;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 footer {

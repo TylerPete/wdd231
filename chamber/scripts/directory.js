@@ -53,18 +53,10 @@ async function getMembers() {
 
 function displayMembers(data) {
     if (gridDisplay) {
-        // <div class="member-div grid">
-        //     <h2>Walmart</h2>
-        //     <span>Silver Member</span>
-        //     <img src="images/walmart-2-1.jpeg">
         //     <p>ADDRESS: 1515 SE Marshall St </p>
         //     <p>PHONE: 515-432-2416</p>
         //     <p>URL: https://www.walmart.com/</p>
         //     <p>OPENED: 2013</p>
-        // </div>
-
-        //membersDiv
-
         data.forEach(function (member) {
             const memberDiv = document.createElement("div");
             memberDiv.classList.add("member-div");
@@ -92,7 +84,7 @@ function displayMembers(data) {
             }
             span.textContent = `${memberPrefix}Member`;
             img.src = member.imageFile;
-            address.textContent = member.address;
+            address.textContent = `ADDRESS: ${member.address}`;
             phone.textContent = member.phone;
             url.textContent = member.url;
             opened.textContent = member.opened;
