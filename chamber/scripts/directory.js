@@ -1,5 +1,5 @@
 // Copyright year and last modification
-let gridDisplay = true;
+let gridDisplay = false;
 const gridRadio = document.querySelector("#grid-select");
 const listRadio = document.querySelector("#list-select");
 const membersDiv = document.querySelector(".members-div");
@@ -57,6 +57,7 @@ function displayMembers(data) {
     if (gridDisplay) {
         membersDiv.classList.remove("list");
         membersDiv.classList.add("grid");
+        membersDiv.replaceChildren();
 
         data.forEach(function (member) {
             const memberDiv = document.createElement("div");
@@ -86,9 +87,9 @@ function displayMembers(data) {
             span.textContent = `${memberPrefix}Member`;
             img.src = member.imageFile;
             address.textContent = `ADDRESS: ${member.address}`;
-            phone.textContent = member.phone;
-            url.textContent = member.url;
-            opened.textContent = member.opened;
+            phone.textContent = `PHONE: ${member.phone}`;
+            url.textContent = `URL: ${member.url}`;
+            opened.textContent = `OPENED: ${member.opened}`;
 
             memberDiv.appendChild(h2);
             memberDiv.appendChild(span);
@@ -104,7 +105,45 @@ function displayMembers(data) {
     } else {
         membersDiv.classList.add("list");
         membersDiv.classList.remove("grid");
+        membersDiv.replaceChildren();
 
+        data.forEach(function (member) {
+            const h2 = document.createElement("h2");
+            const memberDiv = document.createElement("div");
+            memberDiv.classList.add("member-div");
+            memberDiv.classList.add("list");
+
+            const address = document.createElement("p");
+            const phone = document.createElement("p");
+            const url = document.createElement("p");
+            const opened = document.createElement("p");
+
+            let memberPrefix = "";
+            switch (member.membershipLevel) {
+                case 2:
+                    memberPrefix = "Silver ";
+                    break;
+                case 3:
+                    memberPrefix = "Gold ";
+                    break;
+                default:
+                    memberPrefix = "";
+            }
+
+            h2.textContent = `${member.name} - ${memberPrefix}Member`;
+            address.textContent = `ADDRESS: ${member.address}`;
+            phone.textContent = `PHONE: ${member.phone}`;
+            url.textContent = `URL: ${member.url}`;
+            opened.textContent = `OPENED: ${member.opened}`;
+
+            memberDiv.appendChild(address);
+            memberDiv.appendChild(phone);
+            memberDiv.appendChild(url);
+            memberDiv.appendChild(opened);
+
+            membersDiv.appendChild(h2);
+            membersDiv.appendChild(memberDiv);
+        });
     }
 }
 

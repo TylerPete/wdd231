@@ -166,6 +166,16 @@ fieldset {
 
 } */
 
+.member-div.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5rem 10px 1.5rem 10px;
+}
+
+.member-div.list h2 {
+    margin-left: 10px;
+}
+
 
 footer {
     background-color: var(--the-gray-black);
