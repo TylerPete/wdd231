@@ -2,7 +2,7 @@
 let gridDisplay = true;
 const gridRadio = document.querySelector("#grid-select");
 const listRadio = document.querySelector("#list-select");
-const membersDiv = document.querySelector("#members-div");
+const membersDiv = document.querySelector(".members-div");
 
 gridRadio.addEventListener("change", () => {
     if (gridRadio.checked) {
@@ -62,6 +62,51 @@ function displayMembers(data) {
         //     <p>URL: https://www.walmart.com/</p>
         //     <p>OPENED: 2013</p>
         // </div>
+
+        //membersDiv
+
+        data.forEach(function (member) {
+            const memberDiv = document.createElement("div");
+            memberDiv.classList.add("member-div");
+            memberDiv.classList.add("grid");
+
+            const h2 = document.createElement("h2");
+            const span = document.createElement("span");
+            const img = document.createElement("img");
+            const address = document.createElement("p");
+            const phone = document.createElement("p");
+            const url = document.createElement("p");
+            const opened = document.createElement("p");
+
+            h2.textContent = member.name;
+            let memberPrefix = "";
+            switch (member.membershipLevel) {
+                case 2:
+                    memberPrefix = "Silver ";
+                    break;
+                case 3:
+                    memberPrefix = "Gold ";
+                    break;
+                default:
+                    memberPrefix = "";
+            }
+            span.textContent = `${memberPrefix}Member`;
+            img.src = member.imageFile;
+            address.textContent = member.address;
+            phone.textContent = member.phone;
+            url.textContent = member.url;
+            opened.textContent = member.opened;
+
+            memberDiv.appendChild(h2);
+            memberDiv.appendChild(span);
+            memberDiv.appendChild(img);
+            memberDiv.appendChild(address);
+            memberDiv.appendChild(phone);
+            memberDiv.appendChild(url);
+            memberDiv.appendChild(opened);
+
+            membersDiv.appendChild(memberDiv);
+        });
 
 
     } else {

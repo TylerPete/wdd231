@@ -4,7 +4,7 @@
         "address": "1515 SE Marshall St",
         "phone": "515-432-2416",
         "url": "https://www.walmart.com/",
-        "imageFile": "https://raw.githubusercontent.com/TylerPete/wdd231/refs/heads/main/chamber/images/walmart-2-1.jpeg",
+        "imageFile": "./images/walmart-2-1.jpeg",
         "membershipLevel": "3",
         "opened": "2013"
     },
@@ -13,7 +13,7 @@
         "address": "1424 W Mamie Eisenhower Ave",
         "phone": "515-432-2866",
         "url": "https://www.walterssanitary.com",
-        "imageFile": "???????",
+        "imageFile": "./images/walters-2-1.png",
         "membershipLevel": "2",
         "opened": "1929"
     },
@@ -22,7 +22,7 @@
         "address": "1312 S Story Street",
         "phone": "515-432-7399",
         "url": "https://saintsavenuecafeia.com/",
-        "imageFile": "blah",
+        "imageFile": "./images/saints-2-1.png",
         "membershipLevel": "1",
         "opened": 1992
     },
@@ -31,7 +31,7 @@
         "address": "734 7th Street",
         "phone": "515-432-2210",
         "url": "https://www.kruckph.com/",
-        "imageFile": "blah",
+        "imageFile": "./images/kruck-2-1.png",
         "membershipLevel": "2",
         "opened": "1941"
     },
@@ -40,7 +40,7 @@
         "address": "619 Story Street",
         "phone": "515-432-2353",
         "url": "https://homewithihome.com/",
-        "imageFile": "blah",
+        "imageFile": "./images/iHome-2-1.jpg",
         "membershipLevel": "2",
         "other": "other blah"
     },
@@ -49,7 +49,7 @@
         "address": "702 Greene St",
         "phone": "515-432-3727",
         "url": "https://www.boone.lib.ia.us/",
-        "imageFile": "blah",
+        "imageFile": "./images/ericson-2-1.png",
         "membershipLevel": "1",
         "opened": "1901"
     },
@@ -58,7 +58,7 @@
         "address": "1021 S Marshall Street",
         "phone": "515-432-1062",
         "url": "https://www.members1st.com/",
-        "imageFile": "blah",
+        "imageFile": "./images/members-2-1.png",
         "membershipLevel": "3",
         "opened": "1964"
     }
