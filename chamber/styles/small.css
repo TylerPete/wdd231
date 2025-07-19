@@ -48,7 +48,7 @@ header button {
     font-size: 1.4rem;
 }
 
-.day-night::before {
+.day-night::after {
     content: "\25D0";
     color: white;
     font-size: 1.4rem;
@@ -59,7 +59,7 @@ nav {
     display: none;
 }
 
-.navigation.show {
+nav.show {
     display: block;
 }
 

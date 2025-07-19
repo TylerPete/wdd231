@@ -1,1 +1,25 @@
-@media only screen and (min-width: 540px) {}
+@media only screen and (min-width: 545px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .day-night {
+        grid-column: 4 / 5;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid white;
+    }
+}

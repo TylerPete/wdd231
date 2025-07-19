@@ -1,5 +1,5 @@
 // Copyright year and last modification
-let gridDisplay = false;
+let gridDisplay = true;
 const gridRadio = document.querySelector("#grid-select");
 const listRadio = document.querySelector("#list-select");
 const membersDiv = document.querySelector(".members-div");
