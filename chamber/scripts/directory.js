@@ -2,6 +2,7 @@
 let gridDisplay = true;
 const gridRadio = document.querySelector("#grid-select");
 const listRadio = document.querySelector("#list-select");
+const membersDiv = document.querySelector("#members-div");
 
 gridRadio.addEventListener("change", () => {
     if (gridRadio.checked) {
@@ -52,7 +53,17 @@ async function getMembers() {
 
 function displayMembers(data) {
     if (gridDisplay) {
-        //code for generating grid member cards
+        // <div class="member-div grid">
+        //     <h2>Walmart</h2>
+        //     <span>Silver Member</span>
+        //     <img src="images/walmart-2-1.jpeg">
+        //     <p>ADDRESS: 1515 SE Marshall St </p>
+        //     <p>PHONE: 515-432-2416</p>
+        //     <p>URL: https://www.walmart.com/</p>
+        //     <p>OPENED: 2013</p>
+        // </div>
+
+
     } else {
         ///code for generating member list
     }

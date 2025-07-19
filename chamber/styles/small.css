@@ -7,7 +7,7 @@
 *,
 *::before,
 *::after {
-    margin: 0 auto;
+    margin: 0;
     font-family: "Winky Rough";
     box-sizing: border-box;
 }
@@ -17,6 +17,7 @@ nav,
 main,
 footer {
     max-width: 800px;
+    margin: 0 auto;
 }
 
 header {
@@ -101,15 +102,16 @@ fieldset {
 
 .members-div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-bottom: 1rem;
 }
 
 .member-div.grid {
     background-color: var(--the-green);
     border: 2px solid var(--the-gray-black);
     border-radius: 5px;
-    margin: 10px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto-fit, 1fr;
@@ -139,6 +141,7 @@ fieldset {
 .member-div.grid img {
     min-width: 80px;
     max-width: 90%;
+    height: auto;
     margin: 10px auto;
     grid-column: 1/2;
     grid-row: 3 / 20;
