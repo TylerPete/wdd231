@@ -8,12 +8,14 @@ gridRadio.addEventListener("change", () => {
     if (gridRadio.checked) {
         gridDisplay = true;
     }
+    getMembers();
 });
 
 listRadio.addEventListener("change", () => {
     if (listRadio.checked) {
         gridDisplay = false;
     }
+    getMembers();
 });
 
 const currentYear = document.querySelector("#current-year");
@@ -53,10 +55,9 @@ async function getMembers() {
 
 function displayMembers(data) {
     if (gridDisplay) {
-        //     <p>ADDRESS: 1515 SE Marshall St </p>
-        //     <p>PHONE: 515-432-2416</p>
-        //     <p>URL: https://www.walmart.com/</p>
-        //     <p>OPENED: 2013</p>
+        membersDiv.classList.remove("list");
+        membersDiv.classList.add("grid");
+
         data.forEach(function (member) {
             const memberDiv = document.createElement("div");
             memberDiv.classList.add("member-div");
@@ -100,9 +101,10 @@ function displayMembers(data) {
             membersDiv.appendChild(memberDiv);
         });
 
-
     } else {
-        ///code for generating member list
+        membersDiv.classList.add("list");
+        membersDiv.classList.remove("grid");
+
     }
 }
 

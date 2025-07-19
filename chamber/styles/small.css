@@ -100,7 +100,11 @@ fieldset {
     border: 2px solid var(--the-gray-black);
 }
 
-.members-div {
+
+
+/* STYLING FOR GRID VIEW MODE */
+
+.members-div.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-template-rows: auto;
@@ -154,6 +158,14 @@ fieldset {
     overflow-wrap: break-word;
     word-break: break-word;
 }
+
+
+/* STYLING FOR LIST VIEW MODE */
+
+/* .members-div.list {
+
+} */
+
 
 footer {
     background-color: var(--the-gray-black);
