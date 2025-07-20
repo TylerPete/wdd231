@@ -104,7 +104,9 @@ fieldset {
     border: 2px solid var(--the-gray-black);
 }
 
-
+.members-div {
+    min-height: 1000px;
+}
 
 /* STYLING FOR GRID VIEW MODE */
 
