@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-display: swap;
+}
+
 header,
 nav,
 main,
