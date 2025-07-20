@@ -86,8 +86,8 @@ function displayMembers(data) {
             }
             span.textContent = `${memberPrefix}Member`;
             img.src = member.imageFile;
-            img.width = 150;
-            img.height = 75;
+            img.width = 144;
+            img.height = 72;
             img.alt = `${member.name} logo`;
             img.loading = "lazy";
             address.textContent = `ADDRESS: ${member.address}`;
