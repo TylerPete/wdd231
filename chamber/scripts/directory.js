@@ -89,6 +89,7 @@ function displayMembers(data) {
             img.width = "2";
             img.height = "1";
             img.alt = `${member.name} logo`;
+            img.loading = "lazy";
             address.textContent = `ADDRESS: ${member.address}`;
             phone.textContent = `PHONE: ${member.phone}`;
             url.textContent = `URL: ${member.url}`;
