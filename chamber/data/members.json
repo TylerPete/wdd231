@@ -40,7 +40,7 @@
         "address": "619 Story Street",
         "phone": "515-432-2353",
         "url": "https://homewithihome.com/",
-        "imageFile": "./images/iHome-2-1.jpg",
+        "imageFile": "./images/iHome-2-1.webp",
         "membershipLevel": 2,
         "other": "other blah"
     },
@@ -49,7 +49,7 @@
         "address": "702 Greene St",
         "phone": "515-432-3727",
         "url": "https://www.boone.lib.ia.us/",
-        "imageFile": "./images/ericson-2-1.png",
+        "imageFile": "./images/ericson-2-1.webp",
         "membershipLevel": 1,
         "opened": "1901"
     },
