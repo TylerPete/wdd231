@@ -151,6 +151,6 @@ function displayMembers(data) {
     }
 }
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
     getMembers();
 });
