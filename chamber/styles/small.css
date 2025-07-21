@@ -12,10 +12,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-display: swap;
-}
-
 header,
 nav,
 main,
@@ -124,7 +120,6 @@ fieldset {
     border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto-fit, 1fr;
     min-width: 260px;
 }
 
