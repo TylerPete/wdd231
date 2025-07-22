@@ -1,4 +1,4 @@
-function setSectionSelection() {
+export function setSectionSelection(sections) {
     const sectionSelect = document.querySelector("#sectionNumber");
     byuiCourse.sections.forEach((section) => {
         const option = document.createElement("option");
@@ -7,5 +7,3 @@ function setSectionSelection() {
         sectionSelect.appendChild(option);
     });
 }
-
-export function setSectionSelection(sections) { /*...*/ };
