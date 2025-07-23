@@ -91,6 +91,13 @@ nav a {
     padding-right: 10px;
 }
 
+.hero-div {
+    max-width: 800px;
+    height: 350px;
+    background-image: url("../images/kate-shelley-high-bridge-optimized.webp");
+    background-position: center center;
+}
+
 h1 {
     padding-left: 10px;
 }
