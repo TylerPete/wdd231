@@ -104,6 +104,10 @@ fieldset {
     min-height: 1000px;
 }
 
+.members-div.home {
+    min-height: 320px;
+}
+
 /* STYLING FOR GRID VIEW MODE */
 
 .members-div.grid {
