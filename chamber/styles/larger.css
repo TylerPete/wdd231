@@ -23,6 +23,13 @@
         border-right: 1px solid white;
     }
 
+    .hero-div {
+        max-width: 800px;
+        height: 350px;
+        background-image: url("../images/kate-shelley-high-bridge-optimized.webp");
+        background-position: center center;
+    }
+
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
