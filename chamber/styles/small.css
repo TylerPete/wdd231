@@ -111,6 +111,10 @@ nav a {
     padding-top: 1.5rem;
 }
 
+.hero-div h2:hover {
+    color: var(--the-red-pink);
+}
+
 h1 {
     padding-left: 10px;
 }
