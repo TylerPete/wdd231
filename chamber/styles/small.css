@@ -34,6 +34,7 @@ header {
 header img {
     width: 24px;
     height: 24px;
+    margin-left: 10px;
 }
 
 header button {
@@ -132,14 +133,22 @@ fieldset {
     min-height: 320px;
 }
 
-.events-div {
-    background-color: var(--the-green);
+.events-div,
+.weather-div,
+.forecast-div {
+    background-color: var(--the-gray-black);
     border: 2px solid var(--the-gray-black);
     border-radius: 5px;
-    min-width: 260px;
+    min-width: 240px;
     height: 100px;
-    /* Comment this out if actual content added? */
-    margin-bottom: 1rem;
+    margin: 0 10px 1rem 10px;
+}
+
+.events-div h2,
+.weather-div h2,
+.forecast-div h2 {
+    background-color: white;
+    text-align: center;
 }
 
 /* STYLING FOR GRID VIEW MODE */
@@ -150,6 +159,7 @@ fieldset {
     grid-template-rows: auto;
     gap: 10px;
     margin-bottom: 1rem;
+    max-width: 100%;
 }
 
 .member-div.grid {
@@ -158,7 +168,8 @@ fieldset {
     border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    min-width: 260px;
+    min-width: 240px;
+    margin: 0 10px 0 10px;
 }
 
 .member-div.grid h2 {
