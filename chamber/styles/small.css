@@ -132,6 +132,16 @@ fieldset {
     min-height: 320px;
 }
 
+.events-div {
+    background-color: var(--the-green);
+    border: 2px solid var(--the-gray-black);
+    border-radius: 5px;
+    min-width: 260px;
+    height: 100px;
+    /* Comment this out if actual content added? */
+    margin-bottom: 1rem;
+}
+
 /* STYLING FOR GRID VIEW MODE */
 
 .members-div.grid {
