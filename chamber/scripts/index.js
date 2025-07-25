@@ -1,6 +1,3 @@
-// let gridDisplay = true;
-// const gridRadio = document.querySelector("#grid-select");
-// const listRadio = document.querySelector("#list-select");
 // const membersDiv = document.querySelector(".members-div");
 
 // gridRadio.addEventListener("change", () => {
@@ -39,6 +36,81 @@ const hamburger = document.querySelector("#ham-btn");
 hamburger.addEventListener("click", () => {
     navBar.classList.toggle("show");
 });
+
+
+//OpenWeatherAPI calls and stuff
+const tempElement = document.querySelector("#temp");
+const descElement = document.querySelector("#desc");
+const highElement = document.querySelector("#high");
+const lowElement = document.querySelector("#low");
+const humidElement = document.querySelector("#humidity");
+const riseElement = document.querySelector("#sunrise");
+const setElement = document.querySelector("#sunset");
+const imgElement = document.querySelector("#weather-icon");
+
+const weatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=42.06&lon=-93.88&units=imperial&appid=1e39b8f71c9501c6b14ff392dc8ac7b4";
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=42.06&lon=-93.88&units=imperial&appid=1e39b8f71c9501c6b14ff392dc8ac7b4";
+
+async function weatherApiFetch() {
+    try {
+        const response = await fetch(weatherURL);
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+
+            displayCurrentResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function displayCurrentResults(data) {
+    tempElement.innerHTML = `${data.main.temp.toFixed(0)}&deg; F`;
+    descElement.textContent = `${data.weather[0].description}`;
+    highElement.innerHTML = `High: ${data.main.temp_max.toFixed(1)}&deg;`;
+    lowElement.innerHTML = `Low: ${data.main.temp_min.toFixed(1)}&deg;`;
+    humidElement.textContent = `${data.main.humidity}%`;
+
+    let sunriseUnixTimestamp = data.sys.sunrise;
+    let sunsetUnixTimestamp = data.sys.sunset;
+    const sunriseDate = new Date(sunriseUnixTimestamp * 1000);
+    const sunsetDate = new Date(sunsetUnixTimestamp * 1000);
+
+    riseElement.textContent = `Sunrise: ${sunriseDate.toLocaleTimeString().slice(0, -6)} ${sunriseDate.toLocaleTimeString().slice(-2)}`;
+    setElement.textContent = `Sunset: ${sunsetDate.toLocaleTimeString().slice(0, -6)} ${sunsetDate.toLocaleTimeString().slice(-2)}`;
+    imgElement.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+}
+
+async function forecastApiFetch() {
+    try {
+        const response = await fetch(forecastURL);
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+
+            displayForecastResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function displayForecastResults(data) {
+    //code here -- read through documentation of Forecast part of WeatherAPI
+
+
+}
+
+weatherApiFetch();
+forecastApiFetch();
+
 
 
 
