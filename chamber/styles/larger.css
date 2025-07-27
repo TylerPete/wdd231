@@ -42,4 +42,65 @@
     .icon-flexbox {
         margin: 0 0;
     }
+
+    /* Home-page specific rules */
+    .sections-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .events-div {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+    }
+
+    .weather-div {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    .forecast-div {
+        grid-row: 2 / 3;
+        grid-column: 2/ 3;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .sections-div {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .events-div,
+    .weather-div,
+    .forecast-div {
+        min-width: 185px;
+    }
+
+    .events-div {
+        height: 96%;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .weather-div {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+
+    .weather-div img {
+        height: 125px;
+        width: 125px;
+    }
+
+    .forecast-div {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+
+    .members-div.home {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
