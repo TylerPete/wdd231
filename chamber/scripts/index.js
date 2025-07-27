@@ -48,6 +48,10 @@ const riseElement = document.querySelector("#sunrise");
 const setElement = document.querySelector("#sunset");
 const imgElement = document.querySelector("#weather-icon");
 
+const todayWeath = document.querySelector("#today-weath");
+const tomorrowWeath = document.querySelector("#tomorrow-weath");
+const dayAfterTomorrowWeath = document.querySelector("#day-after-tomorrow-weath");
+
 const weatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=42.06&lon=-93.88&units=imperial&appid=1e39b8f71c9501c6b14ff392dc8ac7b4";
 const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=42.06&lon=-93.88&units=imperial&appid=1e39b8f71c9501c6b14ff392dc8ac7b4";
 
@@ -102,9 +106,20 @@ async function forecastApiFetch() {
 }
 
 function displayForecastResults(data) {
-    //code here -- read through documentation of Forecast part of WeatherAPI
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+    let todayDate = new Date();
+    let currentDay = todayDate.getDate();
 
+    let tomorrowDate = new Date(todayDate);
+    tomorrowDate.setDate(currentDay + 1);
+
+    let dayAfterTomorrowDate = new Date(todayDate);
+    dayAfterTomorrowDate.setDate(currentDay + 1);
+
+    todayWeath.innerHTML = `Today: ${data.list[0].main.temp}&deg; F`;
+    tomorrowWeath.innerHTML = `${dayNames[tomorrowDate.getDay()]}: ${data.list[8].main.temp}&deg; F`;
+    dayAfterTomorrowWeath.innerHTML = `${dayNames[dayAfterTomorrowDate.getDay()]}: ${data.list[16].main.temp}&deg;`;
 }
 
 weatherApiFetch();

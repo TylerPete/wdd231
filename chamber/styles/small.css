@@ -175,6 +175,12 @@ fieldset {
     min-height: 1;
 }
 
+.forecast-div p {
+    font-size: 1.15rem;
+    line-height: 2rem;
+    margin-left: 10px;
+}
+
 #desc {
     text-transform: capitalize;
 }
