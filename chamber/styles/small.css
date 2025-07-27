@@ -176,7 +176,7 @@ fieldset {
 #weather-icon {
     grid-column: 1 / 2;
     grid-row: 2 / -1;
-    min-height: 1;
+    min-height: 1px;
 }
 
 .forecast-div p {
