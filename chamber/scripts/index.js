@@ -94,7 +94,6 @@ async function forecastApiFetch() {
 
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
 
             displayForecastResults(data);
         } else {
@@ -126,123 +125,93 @@ weatherApiFetch();
 forecastApiFetch();
 
 
+//Fetching of the CoC members data
 
+const randomMembersDiv = document.querySelector("#random-members");
+const jsonPath = "./data/members.json";
 
-// Fetching of the CoC members data
+async function getMembers() {
+    try {
+        const response = await fetch(jsonPath);
+        const data = await response.json();
+        console.log(data);
+        displayRandomMembers(data);
 
+    } catch (error) {
+        console.error("Error fetching members data:", error);
+    }
+}
 
-// const path = "./data/members.json";
+getMembers();
 
-// async function getMembers() {
-//     try {
-//         const response = await fetch(path);
-//         const data = await response.json();
-//         console.log(data); //TEMPORARY
-//         displayMembers(data);
+function displayRandomMembers(data) {
+    randomMembersDiv.replaceChildren();
 
-//     } catch (error) {
-//         console.error("Error fetching members data:", error);
-//     }
-// }
+    const filteredMembers = data.filter(member => member.membershipLevel >= 2);
+    const firstRandomIndex = getRandomInt(filteredMembers.length);
 
-// function displayMembers(data) {
-//     if (gridDisplay) {
-//         membersDiv.classList.remove("list");
-//         membersDiv.classList.add("grid");
-//         membersDiv.replaceChildren();
+    let threeRandomMembers = [];
+    const removedElement = filteredMembers.splice(firstRandomIndex, 1);
+    threeRandomMembers.push(removedElement[0]);
 
-//         data.forEach(function (member) {
-//             const memberDiv = document.createElement("div");
-//             memberDiv.classList.add("member-div");
-//             memberDiv.classList.add("grid");
+    const secondRandomIndex = getRandomInt(filteredMembers.length);
+    const secondRemovedElement = filteredMembers.splice(secondRandomIndex, 1);
+    threeRandomMembers.push(secondRemovedElement[0]);
 
-//             const h2 = document.createElement("h2");
-//             const span = document.createElement("span");
-//             const img = document.createElement("img");
-//             const address = document.createElement("p");
-//             const phone = document.createElement("p");
-//             const url = document.createElement("p");
-//             const opened = document.createElement("p");
+    const thirdRandomIndex = getRandomInt(filteredMembers.length);
+    const thirdRemovedElement = filteredMembers.splice(thirdRandomIndex, 1);
+    threeRandomMembers.push(thirdRemovedElement[0]);
 
-//             h2.textContent = member.name;
-//             let memberPrefix = "";
-//             switch (member.membershipLevel) {
-//                 case 2:
-//                     memberPrefix = "Silver ";
-//                     break;
-//                 case 3:
-//                     memberPrefix = "Gold ";
-//                     break;
-//                 default:
-//                     memberPrefix = "";
-//             }
-//             span.textContent = `${memberPrefix}Member`;
-//             img.src = member.imageFile;
-//             img.width = 144;
-//             img.height = 72;
-//             img.alt = `${member.name} logo`;
-//             img.loading = "lazy";
-//             address.textContent = `ADDRESS: ${member.address}`;
-//             phone.textContent = `PHONE: ${member.phone}`;
-//             url.textContent = `URL: ${member.url}`;
-//             opened.textContent = `OPENED: ${member.opened}`;
+    threeRandomMembers.forEach(function (member) {
+        let memberPrefix = "";
+        switch (member.membershipLevel) {
+            case 2:
+                memberPrefix = "Silver ";
+                break;
+            case 3:
+                memberPrefix = "Gold ";
+                break;
+            default:
+                memberPrefix = "";
+        }
 
-//             memberDiv.appendChild(h2);
-//             memberDiv.appendChild(span);
-//             memberDiv.appendChild(img);
-//             memberDiv.appendChild(address);
-//             memberDiv.appendChild(phone);
-//             memberDiv.appendChild(url);
-//             memberDiv.appendChild(opened);
+        const memberDiv = document.createElement("div");
+        memberDiv.classList.add("member-div");
+        memberDiv.classList.add("grid");
+        const h2 = document.createElement("h2");
+        const span = document.createElement("span");
+        const img = document.createElement("img");
+        const address = document.createElement("p");
+        const phone = document.createElement("p");
+        const url = document.createElement("p");
+        const opened = document.createElement("p");
+        h2.textContent = member.name;
 
-//             membersDiv.appendChild(memberDiv);
-//         });
+        span.textContent = `${memberPrefix}Member`;
+        img.src = member.imageFile;
+        img.width = 144;
+        img.height = 72;
+        img.alt = `${member.name} logo`;
+        img.loading = "lazy";
+        address.textContent = `ADDRESS: ${member.address}`;
+        phone.textContent = `PHONE: ${member.phone}`;
+        url.textContent = `URL: ${member.url}`;
+        opened.textContent = `OPENED: ${member.opened}`;
+        memberDiv.appendChild(h2);
+        memberDiv.appendChild(span);
+        memberDiv.appendChild(img);
+        memberDiv.appendChild(address);
+        memberDiv.appendChild(phone);
+        memberDiv.appendChild(url);
+        memberDiv.appendChild(opened);
+        randomMembersDiv.appendChild(memberDiv);
+    });
+}
 
-//     } else {
-//         membersDiv.classList.add("list");
-//         membersDiv.classList.remove("grid");
-//         membersDiv.replaceChildren();
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
 
-//         data.forEach(function (member) {
-//             const h2 = document.createElement("h2");
-//             const memberDiv = document.createElement("div");
-//             memberDiv.classList.add("member-div");
-//             memberDiv.classList.add("list");
-
-//             const address = document.createElement("p");
-//             const phone = document.createElement("p");
-//             const url = document.createElement("p");
-//             const opened = document.createElement("p");
-
-//             let memberPrefix = "";
-//             switch (member.membershipLevel) {
-//                 case 2:
-//                     memberPrefix = "Silver ";
-//                     break;
-//                 case 3:
-//                     memberPrefix = "Gold ";
-//                     break;
-//                 default:
-//                     memberPrefix = "";
-//             }
-
-//             h2.textContent = `${member.name} - ${memberPrefix}Member`;
-//             address.textContent = `ADDRESS: ${member.address}`;
-//             phone.textContent = `PHONE: ${member.phone}`;
-//             url.textContent = `URL: ${member.url}`;
-//             opened.textContent = `OPENED: ${member.opened}`;
-
-//             memberDiv.appendChild(address);
-//             memberDiv.appendChild(phone);
-//             memberDiv.appendChild(url);
-//             memberDiv.appendChild(opened);
-
-//             membersDiv.appendChild(h2);
-//             membersDiv.appendChild(memberDiv);
-//         });
-//     }
-// }
-
-// window.addEventListener("DOMContentLoaded", () => {
-//     getMembers();
-// });
+window.addEventListener("DOMContentLoaded", () => {
+    getMembers();
+});
