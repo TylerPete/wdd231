@@ -155,6 +155,10 @@ fieldset {
     margin-bottom: 0.5rem;
 }
 
+.events-div {
+    height: 100px;
+}
+
 .weather-div {
     display: grid;
     grid-template-columns: 5fr 8fr;
@@ -204,6 +208,17 @@ fieldset {
     grid-template-columns: 1fr 2fr;
     min-width: 240px;
     margin: 0 10px 0 10px;
+}
+
+.member-div.grid.home {
+    background-color: var(--the-green);
+    border: 2px solid var(--the-gray-black);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-width: 240px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .member-div.grid h2 {

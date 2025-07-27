@@ -178,6 +178,7 @@ function displayRandomMembers(data) {
         const memberDiv = document.createElement("div");
         memberDiv.classList.add("member-div");
         memberDiv.classList.add("grid");
+        memberDiv.classList.add("home");
         const h2 = document.createElement("h2");
         const span = document.createElement("span");
         const img = document.createElement("img");
