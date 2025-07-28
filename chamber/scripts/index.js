@@ -66,7 +66,7 @@ function displayCurrentResults(data) {
 
     riseElement.textContent = `Sunrise: ${sunriseDate.toLocaleTimeString().slice(0, -6)} ${sunriseDate.toLocaleTimeString().slice(-2)}`;
     setElement.textContent = `Sunset: ${sunsetDate.toLocaleTimeString().slice(0, -6)} ${sunsetDate.toLocaleTimeString().slice(-2)}`;
-    imgElement.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+    imgElement.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`);
     imgElement.setAttribute("alt", data.weather[0].description);
 }
 
