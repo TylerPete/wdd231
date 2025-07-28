@@ -1,22 +1,3 @@
-// const membersDiv = document.querySelector(".members-div");
-
-// gridRadio.addEventListener("change", () => {
-//     if (gridRadio.checked) {
-//         gridDisplay = true;
-//     }
-//     getMembers();
-// });
-
-// listRadio.addEventListener("change", () => {
-//     if (listRadio.checked) {
-//         gridDisplay = false;
-//     }
-//     getMembers();
-// });
-
-
-// Copyright year and last modification
-
 const currentYear = document.querySelector("#current-year");
 const lastModified = document.querySelector("#last-modified");
 
