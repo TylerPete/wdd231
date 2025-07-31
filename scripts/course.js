@@ -82,6 +82,8 @@ const courseGrid = document.querySelector("#crs-grid");
 const buttonList = document.querySelectorAll(".course-butt");
 const numCreditsSpan = document.querySelector("#num-credits");
 
+const courseDetailsModal = document.querySelector("#course-details");
+
 displayCourseCards(courses);
 
 buttonList.forEach(function (button, index) {
@@ -117,6 +119,9 @@ function displayCourseCards(theCourses) {
         }
 
         newCourseCard.textContent = `${checkmark} ${course.subject} ${course.number}`;
+        newCourseCard.addEventListener("click", () => {
+            displayCourseInfoModal(course.title);
+        })
 
         courseGrid.appendChild(newCourseCard);
     });
@@ -124,4 +129,44 @@ function displayCourseCards(theCourses) {
     let totalCredits = theCourses.reduce((accumulator, currentCourse) => accumulator + currentCourse.credits, 0);
 
     numCreditsSpan.textContent = totalCredits;
+}
+
+function displayCourseInfoModal(courseTitle) {
+    courseDetailsModal.replaceChildren();
+    const theCourse = courses.find(course => course.title == courseTitle);
+
+    //<button id="close-button" aria-label="close button">❌</button>
+
+    const closeModalButton = document.createElement("button");
+    closeModalButton.textContent = "❌";
+    closeModalButton.setAttribute("aria-label", "close button");
+    closeModalButton.setAttribute("id", "close-button");
+
+    closeModalButton.addEventListener("click", () => {
+        courseDetailsModal.close();
+    });
+
+
+    const h3 = document.createElement("h3");
+    h3.textContent = `${theCourse.subject} ${theCourse.number}`;
+    const h4 = document.createElement("h4");
+    h4.textContent = courseTitle;
+    const p1 = document.createElement("p");
+    p1.textContent = `${theCourse.credits} credits`;
+    const p2 = document.createElement("p");
+    p2.textContent = `Certificate: ${theCourse.certificate}`;
+    const p3 = document.createElement("p");
+    p3.textContent = theCourse.description;
+    const p4 = document.createElement("p");
+    p4.textContent = `Technology: ${theCourse.technology.join(", ")}`;
+
+    courseDetailsModal.appendChild(closeModalButton);
+    courseDetailsModal.appendChild(h3);
+    courseDetailsModal.appendChild(h4);
+    courseDetailsModal.appendChild(p1);
+    courseDetailsModal.appendChild(p2);
+    courseDetailsModal.appendChild(p3);
+    courseDetailsModal.appendChild(p4);
+
+    courseDetailsModal.showModal();
 }

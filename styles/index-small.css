@@ -203,3 +203,31 @@ footer {
 footer p {
     padding: 0.2rem 0;
 }
+
+#course-details {
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+#course-details h3 {
+    background-color: var(--the-black);
+    color: var(--the-white);
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+#course-details h4 {
+    padding: 1rem 0 0 0;
+}
+
+#close-button {
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    padding: 5px 10px;
+}
+
+#course-details p {
+    margin: 0;
+}
