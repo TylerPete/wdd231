@@ -170,6 +170,7 @@ section:nth-child(3) {
     color: var(--the-black);
     background-color: var(--the-white);
     padding: 0.25rem 0;
+    cursor: pointer;
 }
 
 .course-card.completed {

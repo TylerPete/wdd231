@@ -121,7 +121,8 @@ function displayCourseCards(theCourses) {
         newCourseCard.textContent = `${checkmark} ${course.subject} ${course.number}`;
         newCourseCard.addEventListener("click", () => {
             displayCourseInfoModal(course.title);
-        })
+        });
+        newCourseCard.setAttribute("title", "Click for course information");
 
         courseGrid.appendChild(newCourseCard);
     });
