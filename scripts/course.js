@@ -136,8 +136,6 @@ function displayCourseInfoModal(courseTitle) {
     courseDetailsModal.replaceChildren();
     const theCourse = courses.find(course => course.title == courseTitle);
 
-    //<button id="close-button" aria-label="close button">❌</button>
-
     const closeModalButton = document.createElement("button");
     closeModalButton.textContent = "❌";
     closeModalButton.setAttribute("aria-label", "close button");
