@@ -71,10 +71,10 @@
                         <option value="Gold">Gold Membership</option>
                     </select>
                 </label>
-                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="hidden" id="timestamp" name="timestamp" value="">
                 <label for="org-desc">Organization Description<textarea
                         title="Brief description of business/organization" name="org-desc"></textarea></label>
-                <button type="submit">Apply to Join</button>
+                <button type="submit" id="submit-button">Apply to Join</button>
             </form>
             <div id="membership-levels-div">
                 <h2>Membership Levels</h2>
@@ -82,15 +82,15 @@
                     <h3>Non-Profit Membership Level</h3>
                     <button id="np-level-button">Learn More</button>
                 </div>
-                <div>
+                <div class="membership-level-card">
                     <h3>Bronze Membership Level</h3>
                     <button id="bronze-level-button">Learn More</button>
                 </div>
-                <div>
+                <div class="membership-level-card">
                     <h3>Silver Membership Level</h3>
                     <button id="silver-level-button">Learn More</button>
                 </div>
-                <div>
+                <div class="membership-level-card">
                     <h3>Gold Membership Level</h3>
                     <button id="gold-level-button">Learn More</button>
                 </div>

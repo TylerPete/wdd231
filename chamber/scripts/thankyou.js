@@ -18,20 +18,5 @@ hamburger.addEventListener("click", () => {
     navBar.classList.toggle("show");
 });
 
-const submitButton = document.querySelector("#submit-button");
-const hiddenTimestampInput = document.querySelector("#timestamp");
-
-submitButton.addEventListener("click", () => {
-    const dateTimeNow = new Date();
-
-    let options = {
-        month: "long",
-        day: "numeric",
-        year: "numeric",
-        hour: "numeric",
-        minute: "numeric"
-    }
-    const dateTimeNowString = new Intl.DateTimeFormat("en-us", options).format(dateTimeNow);
-
-    hiddenTimestampInput.value = dateTimeNowString;
-});
+// Get URLSearchParams to display confirmation of form submission details
+const theParams = new URLSearchParams(window.location.search);
