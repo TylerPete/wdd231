@@ -64,6 +64,38 @@
         grid-row: 2 / 3;
         grid-column: 2/ 3;
     }
+
+    /* Join page specific rules */
+    .join-sections-div {
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+    }
+
+    #join-form input[type="text"],
+    #join-form input[type="email"],
+    #join-form input[type="tel"],
+    #join-form textarea {
+        width: 75%;
+        max-width: 450px;
+    }
+
+    #join-form select,
+    #submit-button {
+        width: 75%;
+        max-width: 450px;
+    }
+
+    .membership-level-card {
+        min-width: 200px;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .membership-level-card button {
+        width: 60%;
+        font-size: 1rem;
+    }
+
 }
 
 /* Largest screen size rules */
