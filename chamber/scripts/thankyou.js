@@ -24,7 +24,7 @@ const resultsDiv = document.querySelector("#form-submission-results");
 
 const theParams = new URLSearchParams(window.location.search);
 
-resultsDiv.innerHTML = `<h2>Your submission details:</h2>
+resultsDiv.innerHTML = `<h2>Your application details:</h2>
                             <ul>
                                 <li>First name: ${theParams.get("firstname")}</li>
                                 <li>Last name: ${theParams.get("lastname")}</li>
