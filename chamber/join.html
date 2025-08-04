@@ -58,8 +58,8 @@
                         autocomplete="organization-title" pattern="^[a-zA-Z- ]{8,}+$"></label>
                 <label for="email">Email<input type="email" id="email" required name="email" title="Your email address"
                         autocomplete="email"></label>
-                <label for="phone">Cell Phone<input type="text" id="phone" required name="phone"
-                        title="Your mobile phone number" autocomplete="tel"></label>
+                <label for="phone">Cell Phone<input type="tel" id="phone" required name="phone"
+                        title="Your mobile phone number" autocomplete="tel" pattern="[0-9]{7,}"></label>
                 <label for="org-name">Organization<input type="text" id="org-name" required name="org-name"
                         title="Name of organization" autocomplete="organization"></label>
                 <label for="memb-level">Membership Level
@@ -72,7 +72,7 @@
                     </select>
                 </label>
                 <input type="hidden" id="timestamp" name="timestamp" value="">
-                <label for="org-desc">Organization Description<textarea
+                <label for="org-desc">Organization Description<textarea rows="4"
                         title="Brief description of business/organization" name="org-desc"></textarea></label>
                 <button type="submit" id="submit-button">Apply to Join</button>
             </form>

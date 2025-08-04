@@ -315,3 +315,45 @@ h3 {
     width: 44px;
     height: 44px;
 }
+
+#join-form {
+    margin-left: 10px;
+    width: 100%;
+}
+
+#join-form h2 {
+    margin: 1rem 0;
+}
+
+#join-form>label {
+    width: 100%;
+}
+
+#join-form input[type="text"],
+#join-form input[type="email"],
+#join-form input[type="tel"],
+#join-form textarea {
+    display: block;
+    margin: 0.25rem 0 0.95rem 0;
+    min-height: 44px;
+    min-width: 250px;
+    width: 60%;
+    max-width: 400px;
+}
+
+#join-form select {
+    display: block;
+    margin: 0.25rem 0 0.95rem 0;
+    min-height: 44px;
+    min-width: 250px;
+    width: 60%;
+    max-width: 400px;
+}
+
+:required:invalid {
+    border-left: 4px solid red;
+}
+
+:required:valid {
+    border-left: 4px solid green;
+}
