@@ -452,3 +452,39 @@ h3 {
     border: 2px solid white;
     cursor: pointer;
 }
+
+.membership-modal {
+    width: 75%;
+    height: 80%;
+    margin: auto;
+    padding: 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 44px;
+}
+
+.membership-modal h4 {
+    text-align: center;
+    background-color: var(--the-gray-black);
+    color: white;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    margin-bottom: 20px;
+}
+
+.membership-modal p {
+    padding: 0.5rem 1rem;
+}
+
+.membership-modal li {
+    margin: 0.35rem 0;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}

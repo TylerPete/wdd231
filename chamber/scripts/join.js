@@ -56,3 +56,12 @@ document.querySelector("#silver-level-button").addEventListener("click", () => {
 document.querySelector("#gold-level-button").addEventListener("click", () => {
     document.querySelector("#gold-modal").showModal();
 });
+
+//Select close buttons within modals and add event listeners to close their respective modals
+const closeButtons = document.querySelectorAll(".close-button");
+closeButtons.forEach(function (closeButton) {
+    closeButton.addEventListener("click", function (event) {
+        const parentModalOfButton = event.target.parentNode;
+        parentModalOfButton.close();
+    });
+});
