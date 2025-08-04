@@ -19,4 +19,17 @@ hamburger.addEventListener("click", () => {
 });
 
 // Get URLSearchParams to display confirmation of form submission details
+
+const resultsDiv = document.querySelector("#form-submission-results");
+
 const theParams = new URLSearchParams(window.location.search);
+
+resultsDiv.innerHTML = `<h2>Your submission details:</h2>
+                            <ul>
+                                <li>First name: ${theParams.get("firstname")}</li>
+                                <li>Last name: ${theParams.get("lastname")}</li>
+                                <li>Email address: ${theParams.get("email")}</li>
+                                <li>Mobile phone: ${theParams.get("phone")}</li>
+                                <li>Organization/Business name: ${theParams.get("org-name")}</li>
+                                <li>Submitted on ${theParams.get("timestamp")}</li>
+                            </ul > `;
