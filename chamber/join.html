@@ -49,6 +49,28 @@
         <div class="join-sections-div">
             <form id="join-form">
                 <h2>Membership Application Form</h2>
+                <label for="firstname">First Name<input type="text" id="firstname" required name="firstname"
+                        title="Your first name" autocomplete="given-name"></label>
+                <label for="lastname">Last Name<input type="text" id="lastname" required name="lastname"
+                        title="Your last name" autocomplete="family-name"></label>
+                <label for="org-title">Title<input type="text" id="org-title" name="org-title"
+                        title="Your organizational title--only letters, hyphens, and spaces are allowed"
+                        autocomplete="organization-title" pattern="^[a-zA-Z- ]{8,}+$"></label>
+                <label for="email">Email<input type="email" id="email" required name="email" title="Your email address"
+                        autocomplete="email"></label>
+                <label for="phone">Cell Phone<input type="text" id="phone" required name="phone"
+                        title="Your mobile phone number" autocomplete="tel"></label>
+                <label for="org-name">Organization<input type="text" id="org-name" required name="org-name"
+                        title="Name of organization" autocomplete="organization"></label>
+                <label for="memb-level">Membership Level
+                    <select name="memb-level" id="memb-level">
+                        <option value="" selected disabled>Please select an option...</option>
+                        <option value="non-profit">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
             </form>
             <div id="membership-levels-div">
                 <h2>Membership Levels</h2>
