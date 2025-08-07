@@ -7,3 +7,7 @@
     --strong-brain-pink: #e04444;
     --strong-money-green: #58A021;
 }
+
+* {
+    font-family: "Open Sans";
+}
