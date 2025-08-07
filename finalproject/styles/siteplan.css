@@ -10,4 +10,11 @@
 
 * {
     font-family: "Open Sans";
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h1,
+h2 {
+    font-family: "EB Garamond";
 }
