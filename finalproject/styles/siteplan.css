@@ -53,3 +53,8 @@ p,
 li {
     line-height: 2rem;
 }
+
+#h2-and-img-flex {
+    display: flex;
+    align-items: center;
+}
