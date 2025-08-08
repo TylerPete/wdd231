@@ -59,8 +59,43 @@ li {
     align-items: center;
 }
 
-.F17C76 {
+._F17C76 {
     color: var(--muted-brain-pink);
 }
 
-/* 6 OTHER COLOR CLASSES FOR THE COLOR SCHEMA SECTION */
+._9CD85C {
+    color: var(--muted-money-green);
+}
+
+._FCFCFC {
+    color: var(--background-white);
+}
+
+._E8E8E8 {
+    color: var(--section-gray);
+    background-color: var(--text-black);
+}
+
+._2A2A2A {
+    color: var(--text-black);
+}
+
+._E04444 {
+    color: var(--strong-brain-pink);
+}
+
+._58A021 {
+    color: var(--strong-money-green);
+}
+
+#left-pink {
+    color: var(--strong-brain-pink);
+    font-family: "EB Garamond";
+    font-size: 1.75rem;
+}
+
+#right-green {
+    color: var(--strong-money-green);
+    font-family: "EB Garamond";
+    font-size: 1.75rem;
+}
