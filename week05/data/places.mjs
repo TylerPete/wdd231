@@ -1,4 +1,4 @@
-[
+export const places = [
   {
     "name": "Ledges State Park",
     "address": "1515 P Ave, Madrid, IA 50156",
