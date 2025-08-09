@@ -3,6 +3,7 @@
     --muted-money-green: #9CD85C;
     --background-white: #fcfcfc;
     --section-gray: #E8E8E8;
+    --text-dark-gray: #798DA3;
     --text-black: #2A2A2A;
     --strong-brain-pink: #e04444;
     --strong-money-green: #58A021;
@@ -12,6 +13,12 @@
     font-family: "Open Sans";
     box-sizing: border-box;
     margin: 0;
+}
+
+h1 {
+    background-color: var(--muted-brain-pink);
+    color: var(--background-white);
+    padding: 1rem 0;
 }
 
 h1,
