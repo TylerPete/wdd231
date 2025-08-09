@@ -95,6 +95,10 @@ li {
     color: var(--strong-money-green);
 }
 
+._798DA3 {
+    color: var(--text-dark-gray);
+}
+
 #left-pink {
     color: var(--strong-brain-pink);
     font-family: "EB Garamond";
