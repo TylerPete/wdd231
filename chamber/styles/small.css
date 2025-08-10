@@ -16,7 +16,7 @@ header,
 nav,
 main,
 footer {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -494,6 +494,7 @@ h3 {
     border-radius: 8px;
     background-color: #f4f4f4;
     margin: 10px;
+    overflow: hidden;
 
     display: grid;
     grid-template-areas:

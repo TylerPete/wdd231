@@ -1,4 +1,4 @@
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
     .sections-div {
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: 1fr;
@@ -34,5 +34,11 @@
     .members-div.home {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Discover page */
+    #put-here {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }

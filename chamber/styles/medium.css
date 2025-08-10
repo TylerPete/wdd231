@@ -98,14 +98,8 @@
 
     /* Discover page */
     #put-here>div {
-        border: 1px solid gray;
-        border-radius: 8px;
-        background-color: #f4f4f4;
-        margin: 10px;
-
-        display: grid;
         grid-template-areas:
-            "name ."
+            "name name"
             "photograph description"
             "photograph address";
     }
