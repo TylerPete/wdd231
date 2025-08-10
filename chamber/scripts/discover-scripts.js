@@ -23,6 +23,9 @@ function displayItems(places) {
         div.appendChild(p);
         div.appendChild(address);
         div.appendChild(learnButton);
+
+        const mainElement = document.querySelector("main");
+        mainElement.appendChild(div);
     });
 }
 
