@@ -1,1 +1,95 @@
-<!-- meow -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover notable and must-see locations/events within the Boone area.">
+    <meta name="author" content="Tyler Peterson">
+    <title>Boone Chamber of Commerce | Discover</title>
+
+    <link rel="icon" href="images/train-favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/discover-scripts.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <meta property="og:title" content="Boone Chamber of Commerce | Discover">
+    <meta property="og:description" content="Discover notable and must-see locations/events within the Boone area.">
+    <meta property="og:image" content="##"> <!-- REPLACE THIS WHEN DONE -->
+    <meta property="og:url" content="https://tylerpete.github.io/wdd231/chamber/discover.html">
+</head>
+
+<body>
+    <header>
+        <img class="logo" id="logo-img" src="images/train-favicon.ico" alt="Boone Chamber of Commerce logo" width="24"
+            height="24">
+        <span>Boone Chamber of Commerce</span>
+        <button id="day-night-btn" class="day-night" title="day-night"></button>
+        <button id="ham-btn" class="hamburger" title="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="https://tylerpete.github.io/wdd231/chamber/index.html">Home</a></li>
+            <li class="current"><a href="https://tylerpete.github.io/wdd231/chamber/directory.html">Directory</a></li>
+            <li><a href="https://tylerpete.github.io/wdd231/chamber/join.html">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Directory</h1>
+        <fieldset>
+            <legend>Member View Mode</legend>
+            <input type="radio" name="grid-list-select" value="grid" id="grid-select" checked>
+            <label for="grid-select">Grid</label>
+            <input type="radio" name="grid-list-select" value="display" id="list-select">
+            <label for="list-select">List</label>
+        </fieldset>
+        <div class="members-div">
+            <!--Dynamically-generated member card grid/member line item list here-->
+
+            <!--Placeholder div to be replaced below-->
+            <div class="member-div grid">
+                <h2>Example Business</h2>
+                <span>Gold Member</span>
+                <p>ADDRESS: 1424 W Mamie Eisenhower Ave</p>
+                <p>PHONE: (515) 555-1234</p>
+                <p>URL: www.example.com</p>
+                <p>OPENED: 1992</p>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h3>Boone Chamber of Commerce</h3>
+            <p>903 Story St</p>
+            <p>Boone, IA 50036</p>
+            <p>jennifer@boonecountychamber.com</p>
+            <p>(515)432-3342</p>
+        </div>
+        <div class="icon-flexbox">
+            <a href="https://www.facebook.com/boonecountychamber/" target="_blank" title="Facebook icon"><img
+                    src="images/facebook-icon.svg" alt="Facebook" width="44" height="44"></a>
+            <a href="https://www.linkedin.com/company/boonecountychamber/" target="_blank" title="LinkedIn icon"><img
+                    src="images/linkedin-icon.svg" alt="LinkedIn" width="44" height="44"></a>
+            <a href="https://www.instagram.com/boonecountyiachamber/" target="_blank" title="Instagram icon"><img
+                    src="images/instagram-icon.svg" alt="Instagram" width="44" height="44"></a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Tyler Peterson</p>
+            <p>Ⓒ<span id="current-year"></span> Boone Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
