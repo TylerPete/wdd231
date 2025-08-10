@@ -24,8 +24,8 @@ function displayItems(places) {
         div.appendChild(address);
         div.appendChild(learnButton);
 
-        const mainElement = document.querySelector("main");
-        mainElement.appendChild(div);
+        const mainDiv = document.querySelector("#put-here");
+        mainDiv.appendChild(div);
     });
 }
 
