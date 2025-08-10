@@ -488,3 +488,31 @@ h3 {
 ::backdrop {
     background-color: rgb(0 0 0 / 50%);
 }
+
+#put-here div {
+    border: 1px solid gray;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    margin: 10px;
+}
+
+#put-here div>h2 {
+    margin: 1rem;
+}
+
+#put-here div>img {
+    width: 100%;
+}
+
+#put-here div>p {
+    margin: 10px;
+}
+
+#put-here div>address {
+    margin: 10px;
+}
+
+#put-here div>button {
+    width: 90%;
+    margin: 0 auto;
+}
