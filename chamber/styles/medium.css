@@ -1,0 +1,112 @@
+@media only screen and (min-width: 545px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .day-night {
+        grid-column: 4 / 5;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid white;
+    }
+
+    .hero-div {
+        max-width: 800px;
+        height: 350px;
+        background-image: url("../images/kate-shelley-high-bridge-optimized.webp");
+        background-position: center center;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer div:first-child {
+        word-break: break-word;
+    }
+
+    .icon-flexbox {
+        margin: 0 0;
+    }
+
+    /* Home-page specific rules */
+    .sections-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .events-div {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+    }
+
+    .weather-div {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    .forecast-div {
+        grid-row: 2 / 3;
+        grid-column: 2/ 3;
+    }
+
+    /* Join page specific rules */
+    .join-sections-div {
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+    }
+
+    #join-form input[type="text"],
+    #join-form input[type="email"],
+    #join-form input[type="tel"],
+    #join-form textarea {
+        width: 75%;
+        max-width: 450px;
+    }
+
+    #join-form select,
+    #submit-button {
+        width: 75%;
+        max-width: 450px;
+    }
+
+    .membership-level-card {
+        min-width: 200px;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .membership-level-card button {
+        width: 60%;
+        font-size: 1rem;
+    }
+
+    /* Discover page */
+    #put-here>div {
+        border: 1px solid gray;
+        border-radius: 8px;
+        background-color: #f4f4f4;
+        margin: 10px;
+
+        display: grid;
+        grid-template-areas:
+            "name ."
+            "photograph description"
+            "photograph address";
+    }
+}
