@@ -1,0 +1,35 @@
+@media only screen and (min-width: 600px) {
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navigation li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .cta-button {
+        max-width: 600px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom-div {
+        grid-column: 1 / 2;
+        margin-top: 10px;
+    }
+
+}
