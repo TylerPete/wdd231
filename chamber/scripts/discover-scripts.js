@@ -34,4 +34,53 @@ function displayItems(places) {
     });
 }
 
+//Visit message handling with localStorage
+function getLastVisitDate() {
+    if ("lastVisitDate" in localStorage) {
+        let lastVisitDate = new Date(JSON.parse(window.localStorage.getItem("lastVisitDate")));
+
+        displayVisitMessage(lastVisitDate);
+    } else {
+        displayVisitMessage("");
+    }
+
+}
+
+function displayVisitMessage(lastVisitDate) {
+    let message;
+
+    if (lastVisitDate == "") {
+        message = "Welcome! Let us know if you have any questions.";
+    } else {
+
+        let today = Date.now();
+        let lastTime = lastVisitDate.getTime();
+        let difference = today - lastTime;
+
+        if (difference < 86400000) {
+            message = "Back so soon! Awesome!";
+        } else {
+            let s = "";
+
+            if (difference >= 172800000) { s = "s"; }
+
+            message = `You last visited ${(difference / 86400000).toFixed(0)} day${s} ago.`;
+        }
+
+    }
+    messageP.textContent = message;
+
+    setLastVisitDate();
+}
+
+function setLastVisitDate() {
+    const lastVisitDate = new Date();
+
+    window.localStorage.setItem("lastVisitDate", JSON.stringify(lastVisitDate));
+}
+
+const messageP = document.querySelector("#welcome-message");
+
+getLastVisitDate();
+
 displayItems(places);
