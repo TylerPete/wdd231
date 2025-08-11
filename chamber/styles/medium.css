@@ -101,6 +101,7 @@
         grid-template-areas:
             "name name"
             "photograph description"
-            "photograph address";
+            "photograph address"
+            "button button";
     }
 }
