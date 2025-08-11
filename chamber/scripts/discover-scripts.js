@@ -1,6 +1,8 @@
 import { places } from "../data/places.mjs";
 
 function displayItems(places) {
+    let iterator = 0;
+
     places.forEach(place => {
         const div = document.createElement("div");
         const h2 = document.createElement("h2");
@@ -11,7 +13,10 @@ function displayItems(places) {
         photo.width = "300";
         photo.height = "200";
         photo.alt = place.name;
-        photo.loading = "lazy";
+
+        if (iterator > 1) {
+            photo.loading = "lazy";
+        }
 
         const p = document.createElement("p");
         p.textContent = place.description;
@@ -33,6 +38,8 @@ function displayItems(places) {
 
         const mainDiv = document.querySelector("#put-here");
         mainDiv.appendChild(div);
+
+        iterator++;
     });
 }
 
