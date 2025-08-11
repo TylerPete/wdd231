@@ -228,7 +228,11 @@ footer {
     font-size: 12px;
 }
 
-.footer-div>h3 {
+footer a {
+    text-decoration: none;
+}
+
+.footer-div h3 {
     font-family: "Open Sans";
     font-weight: bold;
     font-size: 12px;
@@ -242,4 +246,33 @@ footer p {
 
 footer p {
     padding: 5px 0;
+}
+
+.icon-flexbox {
+    padding: 15px 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.footer-bottom-div {
+    display: grid;
+    grid-template-columns: 44px 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.footer-bottom-div p {
+    margin: 0;
+    padding: 0;
+}
+
+#braincents-logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+#copyright-p {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
 }
