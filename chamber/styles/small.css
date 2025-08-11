@@ -388,20 +388,6 @@ h3 {
     }
 }
 
-/* @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.03);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-} */
-
 .membership-level-card {
     border: 3px solid var(--the-gray-black);
     border-top-left-radius: 10px;
@@ -415,10 +401,6 @@ h3 {
     max-width: 400px;
     animation: slideInFromRight 0.4s ease-in;
 }
-
-/* .membership-level-card:hover {
-    animation: pulse 1.5s linear infinite;
-} */
 
 .membership-level-card:nth-of-type(1) {
     animation-delay: 0.1s;
@@ -511,7 +493,9 @@ h3 {
 }
 
 #put-here div>img {
-    width: 100%;
+    width: 300px;
+    height: 200px;
+    max-width: 100%;
     grid-area: photograph;
 }
 
