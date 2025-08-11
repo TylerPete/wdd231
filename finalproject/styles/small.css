@@ -21,6 +21,15 @@ header {
     font-family: "EB Garamond";
     font-size: 2rem;
     margin: 0;
+    display: grid;
+    grid-template-columns: 24px auto 52px;
+    align-items: center;
+    padding: 0.35rem 0;
+    gap: 1.5rem;
+}
+
+header img {
+    margin-left: 10px;
 }
 
 h1,
@@ -28,6 +37,7 @@ h2,
 h3,
 h4 {
     font-family: "EB Garamond";
+    color: var(--text-black);
 }
 
 span {
@@ -37,6 +47,7 @@ span {
 .navigation {
     background-color: var(--muted-money-green);
     margin: 0;
+    display: none;
 }
 
 .navigation li {
@@ -46,6 +57,26 @@ span {
     color: var(--the-white);
     cursor: pointer;
     height: 44px;
+}
+
+.hamburger {
+    background-color: inherit;
+    border: none;
+    color: var(--background-white);
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.75rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 2rem;
+}
+
+.navigation.show {
+    display: block;
 }
 
 .navigation a {
