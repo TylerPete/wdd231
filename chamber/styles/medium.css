@@ -104,4 +104,8 @@
             "photograph address"
             "button button";
     }
+
+    #put-here div>img:hover {
+        box-shadow: 5px 5px 3px black;
+    }
 }
