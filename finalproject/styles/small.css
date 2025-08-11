@@ -27,6 +27,7 @@ header {
     padding: 0.35rem 0;
     gap: 1.5rem;
     height: 54px;
+    position: relative;
 }
 
 header img {
@@ -75,16 +76,20 @@ span {
     border: none;
     color: var(--background-white);
     cursor: pointer;
+    max-height: 54px;
+    position: absolute;
+    right: 10px;
 }
 
 .hamburger::before {
     content: "\2630";
     font-size: 1.75rem;
+    width: 50px;
 }
 
 .hamburger.show::before {
     content: "\00D7";
-    font-size: 2.5rem;
+    font-size: 2.75rem;
 }
 
 .navigation.show {
