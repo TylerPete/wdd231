@@ -13,6 +13,7 @@
     font-family: "Open Sans";
     box-sizing: border-box;
     margin: 0;
+    color: var(--text-black);
 }
 
 header {
@@ -220,4 +221,25 @@ hr {
 
 .cta-section h2 {
     margin: 10px;
+}
+
+footer {
+    background-color: var(--section-gray);
+    font-size: 12px;
+}
+
+.footer-div>h3 {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 30px;
+}
+
+footer h3,
+footer p {
+    margin-left: 10px;
+}
+
+footer p {
+    padding: 5px 0;
 }
