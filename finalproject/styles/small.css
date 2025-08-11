@@ -31,6 +31,11 @@ header {
     position: relative;
 }
 
+.header-span,
+.header-span>span {
+    color: var(--background-white);
+}
+
 header img {
     margin-left: 10px;
 }
@@ -226,6 +231,7 @@ hr {
 footer {
     background-color: var(--section-gray);
     font-size: 12px;
+    padding-bottom: 5px;
 }
 
 footer a {
@@ -260,11 +266,16 @@ footer p {
     grid-template-columns: 44px 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
+    margin: 0 10px;
 }
 
 .footer-bottom-div p {
     margin: 0;
     padding: 0;
+}
+
+#currentyear {
+    color: var(--text-dark-gray);
 }
 
 #braincents-logo {
