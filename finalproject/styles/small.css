@@ -12,11 +12,15 @@
 * {
     font-family: "Open Sans";
     box-sizing: border-box;
+    margin: 0;
 }
 
 header {
     background-color: var(--muted-brain-pink);
     color: var(--background-white);
+    font-family: "EB Garamond";
+    font-size: 2rem;
+    margin: 0;
 }
 
 h1,
@@ -30,10 +34,33 @@ span {
     font-family: inherit;
 }
 
+.navigation {
+    background-color: var(--muted-money-green);
+    margin: 0;
+}
+
+.navigation li {
+    list-style: none;
+    border-top: 1px solid var(--the-white);
+    text-align: left;
+    color: var(--the-white);
+    cursor: pointer;
+    height: 44px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--background-white);
+}
+
 .green-text {
     color: var(--muted-money-green);
 }
 
 .pink-text {
     color: var(--muted-brain-pink);
+}
+
+.bold {
+    font-weight: bold;
 }
