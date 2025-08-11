@@ -67,7 +67,6 @@ span {
     border-top: 1px solid var(--the-white);
     text-align: left;
     color: var(--the-white);
-    cursor: pointer;
     height: 44px;
     line-height: 44px;
 }
@@ -173,10 +172,8 @@ p {
 
 .cta-button {
     grid-column: 1 / 3;
-    background-color: var(--muted-brain-pink);
     color: var(--background-white);
     height: 44px;
-    border: 1px solid var(--strong-brain-pink);
     border-radius: 20px;
     width: 90%;
     font-weight: bold;
@@ -184,8 +181,22 @@ p {
     cursor: pointer;
 }
 
-#cta-button:hover {
+.pink-button {
+    background-color: var(--muted-brain-pink);
+    border: 1px solid var(--strong-brain-pink);
+}
+
+.green-button {
+    background-color: var(--muted-money-green);
+    border: 1px solid var(--strong-money-green);
+}
+
+.pink-button:hover {
     background-color: var(--strong-brain-pink);
+}
+
+.green-button:hover {
+    background-color: var(--strong-money-green);
 }
 
 hr {

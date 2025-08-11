@@ -12,6 +12,9 @@
     .navigation li {
         width: 100%;
         text-align: center;
+        cursor: pointer;
+        height: 36px;
+        line-height: 36px;
     }
 
     .hamburger {
@@ -30,6 +33,7 @@
     .footer-bottom-div {
         grid-column: 1 / 2;
         margin-top: 10px;
+
     }
 
 }
