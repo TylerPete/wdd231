@@ -9,6 +9,7 @@ function displayItems(places) {
         const photo = document.createElement("img");
         photo.src = `images/${place.photo_file}`;
         photo.alt = place.name;
+        photo.loading = "lazy";
 
         const p = document.createElement("p");
         p.textContent = place.description;
