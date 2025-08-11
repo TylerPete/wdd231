@@ -125,10 +125,12 @@ span {
 
 .green-text {
     color: var(--muted-money-green);
+    background-color: transparent;
 }
 
 .pink-text {
     color: var(--muted-brain-pink);
+    background-color: transparent;
 }
 
 .bold {
@@ -138,13 +140,11 @@ span {
 .hero-div {
     background-image: url(https://raw.githubusercontent.com/TylerPete/wdd231/main/finalproject/images/braincents-3d-image.webp);
     background-size: contain;
-    /*      ^     ^     ^      ^    */
-    /*CHANGE THIS ON LARGER SCREEN?... larger than the width of that image file or something*/
     background-position: right;
     background-repeat: no-repeat;
     height: 50vh;
     display: grid;
-    grid-template-columns: 5fr 4fr;
+    grid-template-columns: 19fr 16fr;
     align-items: center;
     line-height: auto;
 }
@@ -155,6 +155,7 @@ h2 {
 
 .hero-div h2 {
     font-size: clamp(22px, 7.5vw, 44px);
+    background-color: transparent;
 }
 
 p {
@@ -165,6 +166,7 @@ p {
 .hero-div p {
     grid-column: 1 / 2;
     margin: 0 16px 0 10px;
+    background-color: transparent;
 }
 
 .button-div {
