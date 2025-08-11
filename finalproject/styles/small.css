@@ -13,6 +13,7 @@
     font-family: "Open Sans";
     box-sizing: border-box;
     margin: 0;
+    background-color: var(--background-white);
     color: var(--text-black);
 }
 
@@ -34,6 +35,7 @@ header {
 .header-span,
 .header-span>span {
     color: var(--background-white);
+    background-color: inherit;
 }
 
 header img {
@@ -249,6 +251,10 @@ footer a {
     text-decoration: none;
 }
 
+.footer-div {
+    background-color: inherit;
+}
+
 .footer-div h3 {
     font-family: "Open Sans";
     font-weight: bold;
@@ -259,6 +265,7 @@ footer a {
 footer h3,
 footer p {
     margin-left: 10px;
+    background-color: inherit;
 }
 
 footer p {
@@ -270,6 +277,15 @@ footer p {
     display: flex;
     gap: 30px;
     justify-content: center;
+    background-color: inherit;
+}
+
+.icon-flexbox a {
+    background-color: inherit;
+}
+
+.icon-flexbox img {
+    background-color: inherit;
 }
 
 .footer-bottom-div {
@@ -278,6 +294,7 @@ footer p {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     margin: 0 10px;
+    background-color: inherit;
 }
 
 .footer-bottom-div p {
@@ -294,7 +311,26 @@ footer p {
     grid-row: 1 / 3;
 }
 
+#braincents-logo img {
+    background-color: inherit;
+}
+
 #copyright-p {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
+    background-color: inherit;
+}
+
+#currentyear {
+    background-color: inherit;
+}
+
+/* Retirement Hub page rules */
+
+h1 {
+    margin: 20px 0px 0px 10px;
+}
+
+.non-home-h2 {
+    margin-left: 20px;
 }

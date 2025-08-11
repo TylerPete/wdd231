@@ -1,3 +1,5 @@
+import { setCopyrightYear } from "./copyright-year.mjs";
+
 //Make hamburger button navigation function
 const navBar = document.querySelector("#nav-bar");
 const hamButton = document.querySelector("#ham-btn");
@@ -8,6 +10,4 @@ hamButton.addEventListener("click", () => {
 });
 
 //Input current year for copyright year
-const year = document.querySelector("#currentyear");
-today = new Date();
-year.textContent = today.getFullYear();
+setCopyrightYear();
