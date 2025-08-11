@@ -95,3 +95,11 @@ span {
 .bold {
     font-weight: bold;
 }
+
+.hero-div {
+    background-image: url();
+}
+
+h2 {
+    margin: 10px;
+}
