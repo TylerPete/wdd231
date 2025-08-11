@@ -103,6 +103,8 @@
             "photograph description"
             "photograph address"
             "button button";
+
+        grid-template-columns: auto 1fr;
     }
 
     #put-here div>img:hover {
