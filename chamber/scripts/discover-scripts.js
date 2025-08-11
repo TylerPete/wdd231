@@ -8,6 +8,8 @@ function displayItems(places) {
 
         const photo = document.createElement("img");
         photo.src = `images/${place.photo_file}`;
+        photo.width = "300";
+        photo.height = "200";
         photo.alt = place.name;
         photo.loading = "lazy";
 
