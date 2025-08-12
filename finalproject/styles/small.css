@@ -145,7 +145,6 @@ span {
     display: grid;
     grid-template-columns: 19fr 16fr;
     align-items: center;
-    line-height: auto;
 }
 
 h2 {
