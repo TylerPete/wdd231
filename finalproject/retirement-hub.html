@@ -57,17 +57,29 @@
         <h2>Retirement Account Type Comparison</h2>
 
         <div class="filter-div">
-            <span>Filter by Type: </span>
+            <span class="filter-label">Filter by Type: </span>
             <label for="traditional"><input type="checkbox" id="traditional" name="traditional" value="traditional"
                     checked>Traditional</label>
             <label for="roth"><input type="checkbox" id="roth" name="roth" value="roth" checked>Roth</label>
             <label for="other"><input type="checkbox" id="other" name="other" value="other" checked>Other</label>
-            <span>Filter by Employment: </span>
+            <br>
+            <span class="filter-label">Filter by Employment: </span>
+            <label for="employer-yes" class="filter-label-line"><input type="radio" id="employer-yes" name="employer"
+                    value="employer-yes">Employer-Based</label>
+            <label for="employer-no"><input type="radio" id="employer-no" name="employer"
+                    value="employer-no">Individual</label>
+            <label for="employer-either"><input type="radio" id="employer-either" name="employer"
+                    value="employer-either" checked>Either</label>
 
-            <!-- ADD FILTER RADIO BUTTONS FOR EMPLOYER-BASED/INDIVIDUAL/EITHER -->
-
+            <button id="reset-filters-button">Reset Filters</button>
         </div>
-
+        <div id="account-type-cards-div">
+            <div class="account-card">
+                <h4>Roth IRA</h4>
+                <p>Contribution: Post-tax</p>
+                <p>Withdrawal: Tax-free</p>
+            </div>
+        </div>
         <footer>
             <div class="footer-div">
                 <h3>TOOLS</h3>

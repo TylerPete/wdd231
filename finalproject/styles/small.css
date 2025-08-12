@@ -340,3 +340,28 @@ h1 {
 .filter-div {
     margin: 10px;
 }
+
+.filter-label {
+    margin: 10px 0;
+    display: block;
+}
+
+#reset-filters-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    color: #0000EE;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 10px;
+}
+
+#account-type-cards-div {
+    display: flex;
+    align-items: center;
+}
