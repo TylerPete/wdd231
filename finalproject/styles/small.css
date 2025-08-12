@@ -6,7 +6,7 @@
     --text-dark-gray: #576a7e;
     --text-black: #2A2A2A;
     --strong-brain-pink: #DE3535;
-    --strong-money-green: #48831B;
+    --strong-money-green: #437B19;
 }
 
 * {
@@ -119,7 +119,7 @@ span {
 }
 
 .navigation li:hover {
-    background-color: var(--strong-money-green);
+    background-color: var(--muted-money-green);
 }
 
 .green-text {
@@ -184,21 +184,21 @@ p {
 }
 
 .pink-button {
-    background-color: var(--muted-brain-pink);
-    border: 1px solid var(--strong-brain-pink);
+    background-color: var(--strong-brain-pink);
+    border: 1px solid var(--muted-brain-pink);
 }
 
 .green-button {
-    background-color: var(--muted-money-green);
-    border: 1px solid var(--strong-money-green);
+    background-color: var(--strong-money-green);
+    border: 1px solid var(--muted-money-green);
 }
 
 .pink-button:hover {
-    background-color: var(--strong-brain-pink);
+    background-color: var(--muted-brain-pink);
 }
 
 .green-button:hover {
-    background-color: var(--strong-money-green);
+    background-color: var(--muted-money-green);
 }
 
 hr {
