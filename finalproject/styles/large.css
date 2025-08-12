@@ -5,6 +5,10 @@
         line-height: 32px;
     }
 
+    .hero-div {
+        background-image: url(https://raw.githubusercontent.com/TylerPete/wdd231/main/finalproject/images/braincents-3d-image.webp);
+    }
+
     footer {
         grid-template-columns: 1fr 1fr 1fr;
     }
