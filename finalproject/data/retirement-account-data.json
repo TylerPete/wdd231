@@ -1,0 +1,122 @@
+[
+    {
+        "account-type": "401(k) (Traditional)",
+        "tax-deductible-contributions": "Yes",
+        "contribution-tax-treatment": "Traditional (Pre-tax)",
+        "withdrawal-tax/restrictions": "Taxed as ordinary income; RMDs starting at 73; loans and early withdrawals allowed but may have penalties",
+        "annual-contribution-limits-as-of-2025": "$23,500 employee deferral; $7,500 catch-up if 50+; total $69,000 limit (employer + employee)",
+        "employment-based": "Yes",
+        "employer-match": "Common",
+        "other-information": "One of the most common employer-sponsored retirement plans in the private sector; employer matches are common and increase savings potential; loans and hardship withdrawals may be permitted depending on plan rules"
+    },
+    {
+        "account-type": "Roth IRA",
+        "tax-deductible-contributions": "No",
+        "contribution-tax-treatment": "Roth (Post-tax)",
+        "withdrawal-tax/restrictions": "Tax-free if qualified; no RMDs for original owner",
+        "annual-contribution-limits-as-of-2025": "$7,000 ($8,000 if 50+) combined Traditional + Roth IRAs",
+        "employment-based": "No",
+        "employer-match": "None",
+        "other-information": "Eligibility phases out at higher incomes; contributions can be withdrawn anytime tax- and penalty-free; excellent for tax diversification and legacy planning"
+    },
+    {
+        "account-type": "Traditional IRA",
+        "tax-deductible-contributions": "Yes (if eligible)",
+        "contribution-tax-treatment": "Traditional (Pre-tax)",
+        "withdrawal-tax/restrictions": "Taxed as ordinary income; RMDs required starting at age 73",
+        "annual-contribution-limits-as-of-2025": "$7,000 ($8,000 if 50+) combined Traditional + Roth IRAs",
+        "employment-based": "No",
+        "employer-match": "None",
+        "other-information": "Deductibility phases out with MAGI if covered by workplace plan; rollovers allowed; commonly used by individuals without employer plans"
+    },
+    {
+        "account-type": "403(b)",
+        "tax-deductible-contributions": "Yes",
+        "contribution-tax-treatment": "Traditional (Pre-tax)",
+        "withdrawal-tax/restrictions": "Taxed as ordinary income; RMDs apply; loans and hardship withdrawals may be allowed depending on plan",
+        "annual-contribution-limits-as-of-2025": "$23,000 employee deferral; $7,500 catch-up if 50+",
+        "employment-based": "Yes",
+        "employer-match": "Common",
+        "other-information": "Common among employees of public schools, certain non-profits, and ministers; investment options may include annuity contracts; special catch-up provisions available for long-service employees"
+    },
+    {
+        "account-type": "Roth 401(k)",
+        "tax-deductible-contributions": "No",
+        "contribution-tax-treatment": "Roth (Post-tax)",
+        "withdrawal-tax/restrictions": "Tax-free if qualified; RMDs apply unless rolled over to Roth IRA",
+        "annual-contribution-limits-as-of-2025": "Same as 401(k)",
+        "employment-based": "Yes",
+        "employer-match": "Common",
+        "other-information": "Employer contributions always go to the Traditional portion regardless of employee Roth deferrals; allows higher contribution limits than Roth IRA due to employer plan status"
+    },
+    {
+        "account-type": "457(b)",
+        "tax-deductible-contributions": "Yes",
+        "contribution-tax-treatment": "Traditional (Pre-tax)",
+        "withdrawal-tax/restrictions": "Taxed as ordinary income; no 10% early withdrawal penalty for governmental plans in many cases",
+        "annual-contribution-limits-as-of-2025": "$23,000 employee deferral; catch-up rules for 50+ and special pre-retirement catch-up",
+        "employment-based": "Yes",
+        "employer-match": "None",
+        "other-information": "Governmental 457(b) plans allow penalty-free withdrawals upon separation from service regardless of age; special catch-up contributions available in last 3 years before normal retirement age; less common than 401(k)/403(b) but popular among state/local government employees"
+    },
+    {
+        "account-type": "SIMPLE IRA",
+        "tax-deductible-contributions": "Yes (employee & employer)",
+        "contribution-tax-treatment": "Traditional (Pre-tax)",
+        "withdrawal-tax/restrictions": "Taxed as ordinary income; early withdrawal penalty of 25% if within first 2 years of participation",
+        "annual-contribution-limits-as-of-2025": "$16,000 employee deferral; catch-up allowed; employer match up to 3% or 2% nonelective",
+        "employment-based": "Yes",
+        "employer-match": "Required",
+        "other-information": "Used primarily by small employers (<100 employees) seeking simpler administration than 401(k); lower contribution limits than 401(k) plans; strict early withdrawal penalties in initial participation period"
+    },
+    {
+        "account-type": "SEP IRA",
+        "tax-deductible-contributions": "Yes (employer only)",
+        "contribution-tax-treatment": "Traditional (Pre-tax)",
+        "withdrawal-tax/restrictions": "Taxed as ordinary income; RMDs apply",
+        "annual-contribution-limits-as-of-2025": "Up to 25% of compensation or $69,000 employer contribution limit",
+        "employment-based": "Yes",
+        "employer-match": "Required",
+        "other-information": "Simple and low-cost retirement plan option for small businesses and self-employed; employer must contribute equally for all eligible employees; no employee deferrals allowed"
+    },
+    {
+        "account-type": "Solo 401(k)",
+        "tax-deductible-contributions": "Yes",
+        "contribution-tax-treatment": "Traditional or Roth",
+        "withdrawal-tax/restrictions": "Same as 401(k) (tax/penalties/loans apply); no employer match",
+        "annual-contribution-limits-as-of-2025": "Employee deferral + employer profit-sharing up to $69,000+ overall",
+        "employment-based": "No (self-employed)",
+        "employer-match": "None",
+        "other-information": "Ideal for self-employed individuals or business owners with no employees (except spouse); combines high contribution limits of 401(k) with self-employment flexibility"
+    },
+    {
+        "account-type": "HSA",
+        "tax-deductible-contributions": "No",
+        "contribution-tax-treatment": "Pre-tax",
+        "withdrawal-tax/restrictions": "Tax-free for qualified medical expenses; non-medical withdrawals taxed as ordinary income after 65",
+        "annual-contribution-limits-as-of-2025": "$4,300 self-only; $8,550 family; $1,000 catch-up if 55+",
+        "employment-based": "Yes/No",
+        "employer-match": "None",
+        "other-information": "Not strictly a retirement account but serves as a powerful supplemental tax-advantaged savings vehicle for healthcare costs in retirement; requires enrollment in high-deductible health plan (HDHP); contributions can be made by individual or employer"
+    },
+    {
+        "account-type": "Cash Balance Plan",
+        "tax-deductible-contributions": "Yes",
+        "contribution-tax-treatment": "Traditional (Pre-tax)",
+        "withdrawal-tax/restrictions": "Taxed as ordinary income; benefits paid as lump sum or annuity; less portability; no participant investment control",
+        "annual-contribution-limits-as-of-2025": "Contributions based on actuarial formula; often higher than 401(k) limits",
+        "employment-based": "Yes",
+        "employer-match": "Employer-funded",
+        "other-information": "Hybrid defined benefit plan that credits hypothetical 'account balances' with interest and employer contributions; employer bears investment risk; allows high contribution limits especially for older/high earners; less common than 401(k)s but growing in popularity"
+    },
+    {
+        "account-type": "529 Plan (Education)",
+        "tax-deductible-contributions": "No",
+        "contribution-tax-treatment": "Post-tax (non-deductible)",
+        "withdrawal-tax/restrictions": "Tax-free if used for qualified education expenses; non-qualified withdrawals taxed and may incur penalty",
+        "annual-contribution-limits-as-of-2025": "Varies by state, generally $15,000 annual gift exclusion per contributor",
+        "employment-based": "No",
+        "employer-match": "None",
+        "other-information": "Primarily used for education savings; some states offer limited tax benefits; can be used as a backup source for retirement but with tax penalties if used for non-education expenses"
+    }
+]

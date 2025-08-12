@@ -329,7 +329,8 @@ footer p {
 /* Retirement Hub page rules */
 
 h1 {
-    margin: 20px 0px 0px 10px;
+    margin: 0;
+    padding: 20px 0px 0px 10px;
 }
 
 .non-home-h2 {
