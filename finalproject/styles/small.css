@@ -439,15 +439,34 @@ input[type="checkbox"] {
 }
 
 .collapse-toggle-triangle {
-    content: "\9660;";
     display: inline;
     background-color: transparent;
     border: none;
     margin-right: 0.25rem;
 }
 
-.collapse-toggle-triangle.collapsed {
+.collapse-toggle-triangle::before {
+    content: "\25BC";
+    display: inline;
+    background-color: transparent;
+    border: none;
+    margin-right: 0.25rem;
+}
+
+.collapse-toggle-triangle.collapsed::before {
     content: "\25B6";
+}
+
+#collapsible1.collapsed {
+    display: none;
+}
+
+#collapsible2.collapsed {
+    display: none;
+}
+
+#collapsible3.collapsed {
+    display: none;
 }
 
 #account-modal li {

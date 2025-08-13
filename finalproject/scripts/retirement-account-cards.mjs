@@ -114,18 +114,18 @@ export function populateAccountModal(buttonId) {
         <hr>
         <button id="collapse-triangle1" class="collapse-toggle-triangle collapsed"></button><span>Annual Contribution
                 Limits (2025):</span>
-        <ul id="collapsible1 collapsed">
+        <ul id="collapsible1" class="collapsed">
             ${annualContributionLimitsHTMLString}
         </ul>
         <hr>
         <button id="collapse-triangle2" class="collapse-toggle-triangle collapsed"></button><span>Withdrawal
                 Tax/Restrictions:</span>
-        <ul id="collapsible2 collapsed">
+        <ul id="collapsible2" class="collapsed">
             ${withdrawalTaxRestrictionsHTMLString}
         </ul>
         <hr>
         <span id="collapse-triangle3" class="collapse-toggle-triangle collapsed"></span><span>Other information:</span>
-        <ul id="collapsible3 collapsed">
+        <ul id="collapsible3" class="collapsed">
             ${otherInformationHTMLString}
         </ul>
         <div class="centered-div">
@@ -141,7 +141,9 @@ export function populateAccountModal(buttonId) {
             button.classList.toggle("collapsed");
 
             let buttonNum = button.id[button.id.length - 1];
+
             const associatedUl = document.querySelector(`#collapsible${buttonNum}`);
+
             associatedUl.classList.toggle("collapsed");
         });
     })
