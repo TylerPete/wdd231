@@ -439,6 +439,7 @@ input[type="checkbox"] {
 }
 
 .collapse-toggle-triangle {
+    content: "&#9654;";
     display: inline;
     background-color: transparent;
     border: none;

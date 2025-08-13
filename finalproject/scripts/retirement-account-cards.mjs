@@ -86,9 +86,56 @@ export function getAllAccounts() {
 }
 
 export function populateAccountModal(buttonId) {
+    const mainElement = document.querySelector("main");
     const theModal = document.querySelector("#account-modal");
+    theModal.replaceChildren();
 
+    const theAccount = allAccounts.find(account => account.account_type == buttonId);
 
+    let annualContributionLimitsArray = theAccount.annual_contribution_limits_as_of_2025.split("; ");
+    let annualContributionLimitsHTMLString = `<li>${annualContributionLimitsArray.join("</li>\n<li>")}</li>`;
+
+    let withdrawalTaxRestrictionsArray = theAccount.withdrawal_tax_restrictions.split("; ");
+    let withdrawalTaxRestrictionsHTMLString = `<li>${withdrawalTaxRestrictionsArray.join("</li>\n<li>")}</li>`;
+
+    let otherInformationArray = theAccount.other_information.split("; ");
+    let otherInformationHTMLString = `<li>${otherInformationArray.join("</li>\n<li>")}</li>`;
+
+    theModal.innerHTML = `
+        <div class="centered-div">
+            <h2 class="modal-heading">${theAccount.account_type}</h2>
+            <img class="modal-icon" width="44" height="44" alt="${theAccount.account_type} icon" loading="lazy"
+                    src="images/${theAccount.image_filename}">
+        </div>
+        <p>Contribution Tax Treatment: ${theAccount.contribution_tax_treatment}</p>
+        <p>Tax-Deductible Contributions: ${theAccount.tax_deductible_contributions}</p>
+        <p>Employment-Based: ${theAccount.employment_based}</p>
+        <p>Employer Match: ${theAccount.employer_match}</p>
+        <hr>
+        <span id="collapse-triangle1" class="collapse-toggle-triangle">&#9654;</span><span>Annual Contribution
+                Limits (2025):</span>
+        <ul id="collapsible1">
+            ${annualContributionLimitsHTMLString}
+        </ul>
+        <hr>
+        <span id="collapse-triangle2" class="collapse-toggle-triangle">&#9654;</span><span>Withdrawal
+                Tax/Restrictions:</span>
+        <ul id="collapsible2">
+            ${withdrawalTaxRestrictionsHTMLString}
+        </ul>
+        <hr>
+        <span id="collapse-triangle2" class="collapse-toggle-triangle">&#9654;</span><span>Other information:</span>
+        <ul id="collapsible3">
+            ${otherInformationHTMLString}
+        </ul>
+        <div class="centered-div">
+            <button id="close-modal-button" class="green-button">Close</button>
+        </div>`;
+
+    const closeModalButton = document.querySelector("#close-modal-button");
+    closeModalButton.addEventListener("click", () => {
+        theModal.close();
+    });
 
     theModal.showModal();
 }
