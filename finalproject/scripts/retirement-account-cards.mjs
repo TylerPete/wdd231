@@ -4,16 +4,6 @@ export async function getAccountTypeData() {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log("Fetched data (full):", data);
-    console.log("Type of data:", typeof data);
-    console.log("Is Array:", Array.isArray(data));
-
-    if (!Array.isArray(data)) {
-        console.error("Data is not an array:", data);
-        return;
-    }
-
-
     displayCards(data);
 }
 
@@ -25,20 +15,13 @@ export function displayCards(accountTypeData) {
         const div = document.createElement("div");
         div.classList.add("account-card");
 
-        if (!account || !account.image_filename || !account.account_type) {
-            console.error(`Invalid account data at index ${index}:`, account);
-            return; // Skip this invalid entry
-        }
-
-        console.log(`Processing account: ${account.account_type}, image: ${account.image_filename}`);
-
         const icon = document.createElement("img");
         icon.classList.add("account-type-icon");
         icon.width = "32";
         icon.height = "32";
         icon.alt = `${account.account_type} icon`;
         icon.loading = "lazy";
-        icon.src = `/finalproject/images/${account.image_filename}`;
+        icon.src = `images/${account.image_filename}`;
 
         const h4 = document.createElement("h4");
         h4.textContent = account.account_type;
@@ -52,6 +35,7 @@ export function displayCards(accountTypeData) {
 
         const openModalButton = document.createElement("button");
         openModalButton.classList.add("open-modal-button");
+        openModalButton.textContent = "More info";
 
         div.appendChild(icon);
         div.appendChild(h4);
