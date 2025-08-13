@@ -8,7 +8,8 @@
         "employment-based": "Yes",
         "employer-match": "Common",
         "other-information": "One of the most common employer-sponsored retirement plans in the private sector; employer matches are common and increase savings potential; loans and hardship withdrawals may be permitted depending on plan rules",
-        "image-filename": "traditional-401k-briefcase-icon.svg"
+        "image-filename": "traditional-401k-briefcase-icon.svg",
+        "tax-categorization": "Traditional"
     },
     {
         "account-type": "Roth IRA",
@@ -130,5 +131,38 @@
         "employer-match": "None",
         "other-information": "Primarily used for education savings; some states offer limited tax benefits; can be used as a backup source for retirement but with tax penalties if used for non-education expenses",
         "image-filename": ""
+    },
+    {
+        "account-type": "Thrift Savings Plan (TSP)",
+        "tax-deductible-contributions": "Yes",
+        "contribution-tax-treatment": "Traditional (Pre-tax) or Roth (Post-tax) options",
+        "withdrawal-tax/restrictions": "Taxed as ordinary income; RMDs apply; loans and in-service withdrawals allowed with restrictions",
+        "annual-contribution-limits-as-of-2025": "$23,000 employee deferral; $7,500 catch-up if 50+",
+        "employment-based": "Yes (Federal employees and military)",
+        "employer-match": "Yes (for some federal employees)",
+        "other-information": "Low-cost retirement plan for federal employees and military personnel; similar contribution limits to 401(k); offers lifecycle funds for investment management",
+        "image-filename": "ADD INTO THIS"
+    },
+    {
+        "account-type": "Annuity (Fixed or Variable)",
+        "tax-deductible-contributions": "No",
+        "contribution-tax-treatment": "Post-tax (non-deductible)",
+        "withdrawal-tax/restrictions": "Earnings taxed as ordinary income upon withdrawal; surrender charges may apply early; no RMDs unless annuitized",
+        "annual-contribution-limits-as-of-2025": "No formal limits, but IRS limits on qualified plans apply if held within one",
+        "employment-based": "No (typically individual contracts)",
+        "employer-match": "None",
+        "other-information": "Insurance contract providing lifetime income options; can be used to supplement retirement income; comes with fees and expenses; variable annuities have investment risk",
+        "image-filename": "ADD INTO THIS"
+    },
+    {
+        "account-type": "Health Reimbursement Arrangement (HRA)",
+        "tax-deductible-contributions": "Yes (employer only)",
+        "contribution-tax-treatment": "Pre-tax for employee",
+        "withdrawal-tax/restrictions": "Tax-free reimbursements for qualified medical expenses; funds typically do not roll over if employee leaves",
+        "annual-contribution-limits-as-of-2025": "No formal IRS limit; employer sets contribution amount",
+        "employment-based": "Yes (employer provided)",
+        "employer-match": "N/A (employer funds entirely)",
+        "other-information": "Not a retirement account but a tax-advantaged health benefit; cannot be funded by employee; helps pay medical costs not covered by insurance",
+        "image-filename": "ADD INTO THIS"
     }
 ]
