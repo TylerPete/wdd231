@@ -1,15 +1,21 @@
+let allAccounts = [];
+
 export async function getAccountTypeData() {
     const url = "https://raw.githubusercontent.com/TylerPete/wdd231/main/finalproject/data/retirement-account-data.json";
 
     const response = await fetch(url);
     const data = await response.json();
 
-    filterAccountTypes(data);
+    allAccounts = data;
+
+    displayCards(allAccounts);
 }
 
 export function displayCards(accountTypeData) {
 
     const cardsDiv = document.querySelector("#account-type-cards-div");
+    cardsDiv.replaceChildren();
+
     accountTypeData.forEach((account, index) => {
 
         const div = document.createElement("div");
@@ -57,7 +63,17 @@ export function filterAccountTypes(fullData) {
     const employerNoRadio = document.querySelector("#employer-no");
     const employerEitherRadio = document.querySelector("#employer-either");
 
-    fullData.filter(account => account.)
+    let taxCategorizationArray = [];
+
+    if (traditionalCheckbox.checked) { taxCategorizationArray.push("Traditional"); }
+    if (rothCheckbox.checked) { taxCategorizationArray.push("Roth"); }
+    if (otherCheckbox.checked) { taxCategorizationArray.push("Other"); }
+
+    const filteredData = fullData.filter(account => taxCategorizationArray.some(str => account.tax_categorization.includes(str)));
 
     displayCards(filteredData);
+}
+
+export function getAllAccounts() {
+    return allAccounts;
 }
