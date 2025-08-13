@@ -421,6 +421,46 @@ input[type="checkbox"] {
     padding: 5px;
 }
 
+#account-modal {
+    align-items: center;
+    margin: auto;
+}
+
+.centered-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#account-modal p,
+#account-modal span {
+    font-size: 14px;
+    color: var(--text-black);
+}
+
+.collapse-toggle-triangle {
+    display: inline;
+    background-color: transparent;
+    border: none;
+    margin-right: 0.25rem;
+}
+
+#account-modal li {
+    font-size: 13px;
+    color: var(--text-dark-gray);
+    margin: 3px 0;
+}
+
+#close-modal-button {
+    color: var(--background-white);
+    height: 36px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    padding: 0 15px;
+}
+
 /*    v   v   v   v   v   v   v */
 /* To do: Add CSS ANIMATIONS for ACCOUNT TYPE CARDS on the RETIREMENT HUB PAGE */
 /*     ^   ^   ^   ^   ^   ^   ^  */

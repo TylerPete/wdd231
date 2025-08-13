@@ -41,7 +41,14 @@ export function displayCards(accountTypeData) {
 
         const openModalButton = document.createElement("button");
         openModalButton.classList.add("open-modal-button");
+        openModalButton.id = account.account_type;
         openModalButton.textContent = "More info";
+
+        openModalButton.addEventListener("click", function (event) {
+            const buttonId = event.target.id;
+
+            populateAccountModal(buttonId);
+        });
 
         div.appendChild(icon);
         div.appendChild(h4);
@@ -76,4 +83,12 @@ export function filterAccountTypes(fullData) {
 
 export function getAllAccounts() {
     return allAccounts;
+}
+
+export function populateAccountModal(buttonId) {
+    const theModal = document.querySelector("#account-modal");
+
+
+
+    theModal.showModal();
 }

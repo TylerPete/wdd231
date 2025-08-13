@@ -82,6 +82,43 @@
             <!-- DYNAMICALLY-GENERATED ACCOUNT TYPE CARDS HERE -->
         </div>
 
+        <!-- Modal dialog below (to be dynamically edited by JavaScript whenever opened) -->
+        <dialog id="account-modal">
+            <div class="centered-div">
+                <h2 class="modal-heading">401(k) (Traditional)</h2>
+                <img class="modal-icon" width="44" height="44" alt="401(k) (Traditional) icon" loading="lazy"
+                    src="images/traditional-401k-briefcase-icon.svg">
+            </div>
+            <p>Contribution Tax Treatment: Traditional (Pre-tax)</p>
+            <p>Tax-Deductible Contributions: Yes</p>
+            <p>Employment-Based: Yes</p>
+            <p>Employer Match: Common</p>
+            <hr>
+            <span id="collapse-triangle1" class="collapse-toggle-triangle">&#9654;</span><span>Annual Contribution
+                Limits (2025):</span>
+            <ul id="collapsible1">
+                <li>$23,500 employee deferral</li>
+                <li>$7,500 catch-up if 50+</li>
+                <li>Total $69,000 limit (employer + employee)</li>
+            </ul>
+            <hr>
+            <span id="collapse-triangle2" class="collapse-toggle-triangle">&#9654;</span><span>Withdrawal
+                Tax/Restrictions:</span>
+            <ul id="collapsible2">
+                <li>Taxed as ordinary income</li>
+                <li>RMDs starting at 73</li>
+                <li>Loans and early withdrawals allowed but may have
+                    penalties</li>
+            </ul>
+            <hr>
+            <span id="collapse-triangle2" class="collapse-toggle-triangle">&#9654;</span><span>Other information:</span>
+            <ul id="collapsible3">
+                <li>One of the most common employer-sponsored retirement plans in the private sector</li>
+                <li>Employer matches are common and increase savings potential</li>
+                <li>Loans and hardship withdrawals may be permitted depending on plan rules</li>
+            </ul>
+            <button id="close-modal-button" class="green-button">Close</button>
+        </dialog>
         <hr>
 
         <!--Retirement forecaster tool here-->

@@ -1,6 +1,6 @@
 import { setCopyrightYear } from "./copyright-year.mjs";
 import { setUpNavigation } from "./navigation.mjs";
-import { getAccountTypeData, displayCards, filterAccountTypes, getAllAccounts } from "./retirement-account-cards.mjs";
+import { getAccountTypeData, displayCards, filterAccountTypes, getAllAccounts, populateAccountModal } from "./retirement-account-cards.mjs";
 
 
 //Input current year for copyright year
@@ -19,3 +19,8 @@ theFilterForm.addEventListener("submit", function (event) {
     const data = getAllAccounts();
     filterAccountTypes(data);
 });
+
+
+//temporary
+// const theModal = document.querySelector("#account-modal");
+// theModal.showModal();
