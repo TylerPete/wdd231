@@ -114,18 +114,18 @@ export function populateAccountModal(buttonId) {
         <hr>
         <button id="collapse-triangle1" class="collapse-toggle-triangle collapsed"></button><span>Annual Contribution
                 Limits (2025):</span>
-        <ul id="collapsible1">
+        <ul id="collapsible1 collapsed">
             ${annualContributionLimitsHTMLString}
         </ul>
         <hr>
-        <span id="collapse-triangle2" class="collapse-toggle-triangle"></span><span>Withdrawal
+        <button id="collapse-triangle2" class="collapse-toggle-triangle collapsed"></button><span>Withdrawal
                 Tax/Restrictions:</span>
-        <ul id="collapsible2">
+        <ul id="collapsible2 collapsed">
             ${withdrawalTaxRestrictionsHTMLString}
         </ul>
         <hr>
-        <span id="collapse-triangle3" class="collapse-toggle-triangle"></span><span>Other information:</span>
-        <ul id="collapsible3">
+        <span id="collapse-triangle3" class="collapse-toggle-triangle collapsed"></span><span>Other information:</span>
+        <ul id="collapsible3 collapsed">
             ${otherInformationHTMLString}
         </ul>
         <div class="centered-div">
