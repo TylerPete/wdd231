@@ -447,7 +447,7 @@ input[type="checkbox"] {
 }
 
 .collapse-toggle-triangle.collapsed {
-    content: "\9654;";
+    content: "\25B6";
 }
 
 #account-modal li {

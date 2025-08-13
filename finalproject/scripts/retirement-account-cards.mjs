@@ -124,7 +124,7 @@ export function populateAccountModal(buttonId) {
             ${withdrawalTaxRestrictionsHTMLString}
         </ul>
         <hr>
-        <span id="collapse-triangle3" class="collapse-toggle-triangle">&#9654;</span><span>Other information:</span>
+        <span id="collapse-triangle3" class="collapse-toggle-triangle"></span><span>Other information:</span>
         <ul id="collapsible3">
             ${otherInformationHTMLString}
         </ul>
