@@ -369,19 +369,19 @@ input[type="checkbox"] {
 .account-card {
     border: 1px solid var(--text-dark-gray);
     border-radius: 5px;
-    height: 200px;
-    width: 175px;
+    height: 300px;
+    width: 200px;
     justify-items: center;
-    align-items: center;
+    align-items: end;
     display: grid;
     grid-template-columns: 4fr 9fr;
-    grid-template-rows: 7fr 3fr 3fr;
-    padding: 10px 0;
+    grid-template-rows: 5fr 3fr 3fr 3fr 1fr;
+    padding: 5px 0;
     margin: 10px auto;
 }
 
 .account-card h4 {
-    margin-top: 25px;
+    margin-top: 22px;
     grid-column: 2 / 3;
     justify-self: start;
     align-self: start;
