@@ -47,3 +47,7 @@ export function displayCards(accountTypeData) {
         cardsDiv.appendChild(div);
     });
 }
+
+export function filterAccountTypes(typeSelections, employmentSelection) {
+
+}

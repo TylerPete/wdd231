@@ -9,6 +9,14 @@ setCopyrightYear();
 //Make hamburger button navigation function
 setUpNavigation();
 
-
 //meow testing
 getAccountTypeData();
+
+const traditionalCheckbox = document.querySelector("#traditional");
+const rothCheckbox = document.querySelector("#roth");
+const otherCheckbox = document.querySelector("#other");
+
+const employerYesRadio = document.querySelector("#employer-yes");
+const employerNoRadio = document.querySelector("#employer-no");
+const employerEitherRadio = document.querySelector("#employer-either");
+

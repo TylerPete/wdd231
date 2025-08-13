@@ -345,8 +345,18 @@ h1 {
     display: block;
 }
 
+#filter-submit-button {
+    display: inline;
+    color: var(--background-white);
+    height: 44px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+}
+
 #reset-filters-button {
-    display: block;
+    display: inline;
     background-color: transparent;
     border: none;
     font-size: 12px;
