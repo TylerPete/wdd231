@@ -112,25 +112,39 @@ export function populateAccountModal(buttonId) {
         <p>Employment-Based: ${theAccount.employment_based}</p>
         <p>Employer Match: ${theAccount.employer_match}</p>
         <hr>
-        <span id="collapse-triangle1" class="collapse-toggle-triangle">&#9654;</span><span>Annual Contribution
+        <button id="collapse-triangle1" class="collapse-toggle-triangle collapsed"></button><span>Annual Contribution
                 Limits (2025):</span>
         <ul id="collapsible1">
             ${annualContributionLimitsHTMLString}
         </ul>
         <hr>
-        <span id="collapse-triangle2" class="collapse-toggle-triangle">&#9654;</span><span>Withdrawal
+        <span id="collapse-triangle2" class="collapse-toggle-triangle"></span><span>Withdrawal
                 Tax/Restrictions:</span>
         <ul id="collapsible2">
             ${withdrawalTaxRestrictionsHTMLString}
         </ul>
         <hr>
-        <span id="collapse-triangle2" class="collapse-toggle-triangle">&#9654;</span><span>Other information:</span>
+        <span id="collapse-triangle3" class="collapse-toggle-triangle">&#9654;</span><span>Other information:</span>
         <ul id="collapsible3">
             ${otherInformationHTMLString}
         </ul>
         <div class="centered-div">
             <button id="close-modal-button" class="green-button">Close</button>
         </div>`;
+
+    const collapseButtons = document.querySelectorAll(".collapse-toggle-triangle");
+
+    collapseButtons.forEach(function (button) {
+        console.log(button);
+
+        button.addEventListener("click", () => {
+            button.classList.toggle("collapsed");
+
+            let buttonNum = button.id[button.id.length - 1];
+            const associatedUl = document.querySelector(`#collapsible${buttonNum}`);
+            associatedUl.classList.toggle("collapsed");
+        });
+    })
 
     const closeModalButton = document.querySelector("#close-modal-button");
     closeModalButton.addEventListener("click", () => {
