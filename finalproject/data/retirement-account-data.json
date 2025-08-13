@@ -20,7 +20,8 @@
         "employment_based": "No",
         "employer_match": "None",
         "other_information": "Eligibility phases out at higher incomes; contributions can be withdrawn anytime tax- and penalty-free; excellent for tax diversification and legacy planning",
-        "image_filename": "roth-ira-shield-icon.svg"
+        "image_filename": "roth-ira-shield-icon.svg",
+        "tax_categorization": "Roth"
     },
     {
         "account_type": "Traditional IRA",
@@ -31,7 +32,8 @@
         "employment_based": "No",
         "employer_match": "None",
         "other_information": "Deductibility phases out with MAGI if covered by workplace plan; rollovers allowed; commonly used by individuals without employer plans",
-        "image_filename": "traditional-ira-sack-icon.svg"
+        "image_filename": "traditional-ira-sack-icon.svg",
+        "tax_categorization": "Traditional"
     },
     {
         "account_type": "403(b)",
@@ -42,7 +44,8 @@
         "employment_based": "Yes",
         "employer_match": "Common",
         "other_information": "Common among employees of public schools, certain non-profits, and ministers; investment options may include annuity contracts; special catch-up provisions available for long-service employees",
-        "image_filename": "403b-book-icon.svg"
+        "image_filename": "403b-book-icon.svg",
+        "tax_categorization": "Traditional"
     },
     {
         "account_type": "Roth 401(k)",
@@ -53,7 +56,8 @@
         "employment_based": "Yes",
         "employer_match": "Common",
         "other_information": "Employer contributions always go to the Traditional portion regardless of employee Roth deferrals; allows higher contribution limits than Roth IRA due to employer plan status",
-        "image_filename": "roth-401k-chart-icon.svg"
+        "image_filename": "roth-401k-chart-icon.svg",
+        "tax_categorization": "Roth"
     },
     {
         "account_type": "457(b)",
@@ -64,7 +68,8 @@
         "employment_based": "Yes",
         "employer_match": "None",
         "other_information": "Governmental 457(b) plans allow penalty-free withdrawals upon separation from service regardless of age; special catch-up contributions available in last 3 years before normal retirement age; less common than 401(k)/403(b) but popular among state/local government employees",
-        "image_filename": "457b-capitol-icon.svg"
+        "image_filename": "457b-capitol-icon.svg",
+        "tax_categorization": "Traditional"
     },
     {
         "account_type": "SIMPLE IRA",
@@ -75,7 +80,8 @@
         "employment_based": "Yes",
         "employer_match": "Required",
         "other_information": "Used primarily by small employers (<100 employees) seeking simpler administration than 401(k); lower contribution limits than 401(k) plans; strict early withdrawal penalties in initial participation period",
-        "image_filename": "simple-ira-handshake-icon.svg"
+        "image_filename": "simple-ira-handshake-icon.svg",
+        "tax_categorization": "Traditional"
     },
     {
         "account_type": "SEP IRA",
@@ -86,7 +92,8 @@
         "employment_based": "Yes",
         "employer_match": "Required",
         "other_information": "Simple and low-cost retirement plan option for small businesses and self-employed; employer must contribute equally for all eligible employees; no employee deferrals allowed",
-        "image_filename": "sep-ira-clipboard-icon.svg"
+        "image_filename": "sep-ira-clipboard-icon.svg",
+        "tax_categorization": "Traditional"
     },
     {
         "account_type": "Solo 401(k)",
@@ -97,7 +104,8 @@
         "employment_based": "No (self-employed)",
         "employer_match": "None",
         "other_information": "Ideal for self-employed individuals or business owners with no employees (except spouse); combines high contribution limits of 401(k) with self-employment flexibility",
-        "image_filename": "solo-401k-icon.svg"
+        "image_filename": "solo-401k-icon.svg",
+        "tax_categorization": "Traditional/Roth"
     },
     {
         "account_type": "HSA",
@@ -108,7 +116,8 @@
         "employment_based": "Yes/No",
         "employer_match": "None",
         "other_information": "Not strictly a retirement account but serves as a powerful supplemental tax-advantaged savings vehicle for healthcare costs in retirement; requires enrollment in high-deductible health plan (HDHP); contributions can be made by individual or employer",
-        "image_filename": "hsa-stethoscope-icon.svg"
+        "image_filename": "hsa-stethoscope-icon.svg",
+        "tax_categorization": "Other"
     },
     {
         "account_type": "Cash Balance Plan",
@@ -119,7 +128,8 @@
         "employment_based": "Yes",
         "employer_match": "Employer-funded",
         "other_information": "Hybrid defined benefit plan that credits hypothetical 'account balances' with interest and employer contributions; employer bears investment risk; allows high contribution limits especially for older/high earners; less common than 401(k)s but growing in popularity",
-        "image_filename": "cash-balance-plan-calculator-icon.svg"
+        "image_filename": "cash-balance-plan-calculator-icon.svg",
+        "tax_categorization": "Traditional"
     },
     {
         "account_type": "529 Plan (Education)",
@@ -130,7 +140,8 @@
         "employment_based": "No",
         "employer_match": "None",
         "other_information": "Primarily used for education savings; some states offer limited tax benefits; can be used as a backup source for retirement but with tax penalties if used for non-education expenses",
-        "image_filename": "529-gradcap-icon.svg"
+        "image_filename": "529-gradcap-icon.svg",
+        "tax_categorization": "Other"
     },
     {
         "account_type": "Thrift Savings Plan (TSP)",
@@ -141,7 +152,8 @@
         "employment_based": "Yes (Federal employees and military)",
         "employer_match": "Yes (for some federal employees)",
         "other_information": "Low-cost retirement plan for federal employees and military personnel; similar contribution limits to 401(k); offers lifecycle funds for investment management",
-        "image_filename": "tsp-helmet-icon.svg"
+        "image_filename": "tsp-helmet-icon.svg",
+        "tax_categorization": "Other"
     },
     {
         "account_type": "Annuity (Fixed or Variable)",
@@ -152,7 +164,8 @@
         "employment_based": "No (typically individual contracts)",
         "employer_match": "None",
         "other_information": "Insurance contract providing lifetime income options; can be used to supplement retirement income; comes with fees and expenses; variable annuities have investment risk",
-        "image_filename": "annuity-hourglass-icon.svg"
+        "image_filename": "annuity-hourglass-icon.svg",
+        "tax_categorization": "Other"
     },
     {
         "account_type": "Health Reimbursement Arrangement (HRA)",
@@ -163,6 +176,7 @@
         "employment_based": "Yes (employer provided)",
         "employer_match": "N/A (employer funds entirely)",
         "other_information": "Not a retirement account but a tax-advantaged health benefit; cannot be funded by employee; helps pay medical costs not covered by insurance",
-        "image_filename": "hra-medical-kit-icon.svg"
+        "image_filename": "hra-medical-kit-icon.svg",
+        "tax_categorization": "Other"
     }
 ]

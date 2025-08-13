@@ -4,7 +4,7 @@ export async function getAccountTypeData() {
     const response = await fetch(url);
     const data = await response.json();
 
-    displayCards(data);
+    filterAccountTypes(data);
 }
 
 export function displayCards(accountTypeData) {
@@ -48,6 +48,16 @@ export function displayCards(accountTypeData) {
     });
 }
 
-export function filterAccountTypes(typeSelections, employmentSelection) {
+export function filterAccountTypes(fullData) {
+    const traditionalCheckbox = document.querySelector("#traditional");
+    const rothCheckbox = document.querySelector("#roth");
+    const otherCheckbox = document.querySelector("#other");
 
+    const employerYesRadio = document.querySelector("#employer-yes");
+    const employerNoRadio = document.querySelector("#employer-no");
+    const employerEitherRadio = document.querySelector("#employer-either");
+
+    fullData.filter(account => account.)
+
+    displayCards(filteredData);
 }

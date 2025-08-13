@@ -1,6 +1,6 @@
 import { setCopyrightYear } from "./copyright-year.mjs";
 import { setUpNavigation } from "./navigation.mjs";
-import { getAccountTypeData, displayCards } from "./retirement-account-cards.mjs";
+import { getAccountTypeData, displayCards, filterAccountTypes } from "./retirement-account-cards.mjs";
 
 
 //Input current year for copyright year
@@ -12,11 +12,9 @@ setUpNavigation();
 //meow testing
 getAccountTypeData();
 
-const traditionalCheckbox = document.querySelector("#traditional");
-const rothCheckbox = document.querySelector("#roth");
-const otherCheckbox = document.querySelector("#other");
+const theFilterForm = document.querySelector(".filter-div");
+theFilterForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-const employerYesRadio = document.querySelector("#employer-yes");
-const employerNoRadio = document.querySelector("#employer-no");
-const employerEitherRadio = document.querySelector("#employer-either");
-
+    filterAccountTypes();
+});

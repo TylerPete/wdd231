@@ -58,38 +58,34 @@
 
         <h2>Retirement Account Type Comparison</h2>
 
-        <div class="filter-div">
-            <span class="filter-label">Filter by Type: </span>
-            <label for="traditional"><input type="checkbox" id="traditional" name="traditional" value="traditional"
-                    checked>Traditional</label>
-            <label for="roth"><input type="checkbox" id="roth" name="roth" value="roth" checked>Roth</label>
-            <label for="other"><input type="checkbox" id="other" name="other" value="other" checked>Other</label>
-            <br>
-            <span class="filter-label">Filter by Employment: </span>
-            <label for="employer-yes" class="filter-label-line"><input type="radio" id="employer-yes" name="employer"
-                    value="employer-yes">Employer-Based</label>
-            <label for="employer-no"><input type="radio" id="employer-no" name="employer"
-                    value="employer-no">Individual</label>
-            <label for="employer-either"><input type="radio" id="employer-either" name="employer"
-                    value="employer-either" checked>Either</label>
-            <br>
-            <button id="filter-submit-button" class="green-button">Filter Accounts</button>
-            <button id="reset-filters-button">Reset Filters</button>
-        </div>
+        <form class="filter-div">
+            <fieldset>
+                <legend class="filter-label">Filter by Type: </legend>
+                <label for="traditional"><input type="checkbox" id="traditional" name="traditional" value="traditional"
+                        checked>Traditional</label>
+                <label for="roth"><input type="checkbox" id="roth" name="roth" value="roth" checked>Roth</label>
+                <label for="other"><input type="checkbox" id="other" name="other" value="other" checked>Other</label>
+                <br>
+                <legend class="filter-label">Filter by Employment: </legend>
+                <label for="employer-yes" class="filter-label-line"><input type="radio" id="employer-yes"
+                        name="employer" value="employer-yes">Employer-Based</label>
+                <label for="employer-no"><input type="radio" id="employer-no" name="employer"
+                        value="employer-no">Individual</label>
+                <label for="employer-either"><input type="radio" id="employer-either" name="employer"
+                        value="employer-either" checked>Either</label>
+                <br>
+                <button id="filter-submit-button" class="green-button">Filter Accounts</button>
+                <button id="reset-filters-button">Reset Filters</button>
+            </fieldset>
+        </form>
         <div id="account-type-cards-div">
-
-            <!-- SAMPLE DIV TO BE DELETED--MODEL DYNAMICALLY-GENERATED CARDS AFTER THIS ONE -->
-            <!-- v   v   v   v   v   v -->
-            <div class="account-card">
-                <img class="account-type-icon" src="images/roth-ira-shield-icon.svg" width="32" height="32"
-                    alt="Roth IRA icon" loading="lazy">
-                <h4>Roth IRA</h4>
-                <p>Contribution: Roth (Post-tax)</p>
-                <p>Withdrawal: Tax-free if qualified; no RMDs for original owner</p>
-                <p>Annual Contribution limit: $7,000 ($8,000 if 50+) combined Traditional + Roth IRAs</p>
-                <button class="open-modal-button">More Info</button>
-            </div>
+            <!-- DYNAMICALLY-GENERATED ACCOUNT TYPE CARDS HERE -->
         </div>
+
+        <hr>
+
+        <!--Retirement forecaster tool here-->
+
         <footer>
             <div class="footer-div">
                 <h3>TOOLS</h3>
