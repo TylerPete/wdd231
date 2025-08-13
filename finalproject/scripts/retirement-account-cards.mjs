@@ -1,5 +1,13 @@
 let allAccounts = [];
 
+const traditionalCheckbox = document.querySelector("#traditional");
+const rothCheckbox = document.querySelector("#roth");
+const otherCheckbox = document.querySelector("#other");
+
+const employerYesRadio = document.querySelector("#employer-yes");
+const employerNoRadio = document.querySelector("#employer-no");
+const employerEitherRadio = document.querySelector("#employer-either");
+
 export async function getAccountTypeData() {
     const url = "https://raw.githubusercontent.com/TylerPete/wdd231/main/finalproject/data/retirement-account-data.json";
 
@@ -62,13 +70,13 @@ export function displayCards(accountTypeData) {
 }
 
 export function filterAccountTypes(fullData) {
-    const traditionalCheckbox = document.querySelector("#traditional");
-    const rothCheckbox = document.querySelector("#roth");
-    const otherCheckbox = document.querySelector("#other");
+    // const traditionalCheckbox = document.querySelector("#traditional");
+    // const rothCheckbox = document.querySelector("#roth");
+    // const otherCheckbox = document.querySelector("#other");
 
-    const employerYesRadio = document.querySelector("#employer-yes");
-    const employerNoRadio = document.querySelector("#employer-no");
-    const employerEitherRadio = document.querySelector("#employer-either");
+    // const employerYesRadio = document.querySelector("#employer-yes");
+    // const employerNoRadio = document.querySelector("#employer-no");
+    // const employerEitherRadio = document.querySelector("#employer-either");
 
     let taxCategorizationArray = [];
 
@@ -154,4 +162,16 @@ export function populateAccountModal(buttonId) {
     });
 
     theModal.showModal();
+}
+
+export function resetFilters() {
+
+    traditionalCheckbox.checked = true;
+    rothCheckbox.checked = true;
+    otherCheckbox.checked = true;
+
+    employerYesRadio.checked = false;
+    employerEitherRadio.checked = true;
+
+    filterAccountTypes();
 }

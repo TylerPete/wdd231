@@ -375,6 +375,8 @@ input[type="checkbox"] {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
 }
 
 .account-card {
@@ -388,7 +390,7 @@ input[type="checkbox"] {
     grid-template-columns: 4fr 9fr;
     grid-template-rows: 50px 3fr 3fr 3fr 1fr;
     padding: 5px 0;
-    margin: 10px auto;
+    margin: 10px;
 }
 
 .account-card h4 {
