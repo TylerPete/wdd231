@@ -63,7 +63,10 @@ function copyLastEntries() {
 
         const retrievedURLSearchParams = new URLSearchParams(lastParamsObject);
 
-        const loanAmountInput = document.querySelector("loan-amount-input");
-        loanAmountInput.value = retrievedURLSearchParams.get("")
+        const loanAmountInput = document.querySelector("#loan-amount-input");
+        loanAmountInput.value = retrievedURLSearchParams.get("loan-amount");
+
+        const currentBalanceInput = document.querySelector("#current-balance-input");
+        currentBalanceInput.value = retrievedURLSearchParams.get("current-balance");
     }
 }
