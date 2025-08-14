@@ -63,8 +63,7 @@ export function calculateMortgagePayoff() {
         previousCumulativeInterest = cumulativeInterest[i - 1];
         i++;
 
-        console.log(previousCumulativeInterest);
-        testDownIterator--;
+        console.log(`Ending balance after payment #${paymentNumbers[i - 1]}: ${endingBalance}`);
     }
 }
 
