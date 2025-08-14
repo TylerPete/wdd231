@@ -28,6 +28,7 @@ export function calculateMortgagePayoff(params) {
     let totalNumPayments = Number(params.get("original-term-length")) * 12;
 
     let standardPayment = (loanAmount * monthlyRate) / (1 - ((1 + monthlyRate) ** (-1 * totalNumPayments)));
+    console.log(`Standard monthly payment: ${standardPayment}`);
 
     let paymentNumbers = [];
     let beginningBalances = [];
@@ -42,7 +43,7 @@ export function calculateMortgagePayoff(params) {
 
         let monthlyInterest = (currentBalance * monthlyRate);
         monthlyInterests.push(monthlyInterest);
-        console.log(`Monthly interest payment: $${monthlyInterest.toFixed(2)}`);
+        //
 
         let totalPayment = standardPayment + extraMonthlyPayment;
 
@@ -61,7 +62,7 @@ export function calculateMortgagePayoff(params) {
         currentBalance = endingBalance;
         cumulativeInterest.push(monthlyInterest + (cumulativeInterest.at(-1) || 0));
 
-        console.log(`Ending balance after payment #${i}: $${endingBalance.toFixed(2)}`);
+        // console.log(`Ending balance after payment #${i}: $${endingBalance.toFixed(2)}`);
         i++;
     }
 
