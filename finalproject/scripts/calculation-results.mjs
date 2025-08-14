@@ -44,7 +44,7 @@ export function calculateMortgagePayoff() {
     let i = 1;
 
     let testDownIterator = 15;
-    while (testDownIterator > 0) {
+    while (currentBalance > 0.01) {
         paymentNumbers.push(i);
 
         beginningBalances.push(currentBalance);
