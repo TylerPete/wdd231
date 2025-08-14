@@ -70,13 +70,6 @@ export function displayCards(accountTypeData) {
 }
 
 export function filterAccountTypes(fullData) {
-    // const traditionalCheckbox = document.querySelector("#traditional");
-    // const rothCheckbox = document.querySelector("#roth");
-    // const otherCheckbox = document.querySelector("#other");
-
-    // const employerYesRadio = document.querySelector("#employer-yes");
-    // const employerNoRadio = document.querySelector("#employer-no");
-    // const employerEitherRadio = document.querySelector("#employer-either");
 
     let taxCategorizationArray = [];
 
@@ -86,7 +79,17 @@ export function filterAccountTypes(fullData) {
 
     const filteredData = fullData.filter(account => taxCategorizationArray.some(str => account.tax_categorization.includes(str)));
 
-    displayCards(filteredData);
+    let employmentBasedSelection = "";
+
+    if (employerYesRadio.checked) {
+        employmentBasedSelection = "Yes";
+    } else if (employerNoRadio.checked) {
+        employmentBasedSelection = "No";
+    }
+
+    const doubleFilteredData = filteredData.filter(account => account.employment_based.includes(employmentBasedSelection));
+
+    displayCards(doubleFilteredData);
 }
 
 export function getAllAccounts() {
