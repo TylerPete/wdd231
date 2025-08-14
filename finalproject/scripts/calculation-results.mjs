@@ -16,9 +16,10 @@ function getDataFromURL() {
     return params;
 }
 
-// timestamp
+// timestamp=%222025-08-14T19%3A03%3A27.809Z%22
 
 export function calculateMortgagePayoff(params, paymentScheduleArray) {
+
     let loanAmount = Number(params.get("loan-amount"));
 
     let currentBalance = Number(params.get("current-balance"));
@@ -31,7 +32,30 @@ export function calculateMortgagePayoff(params, paymentScheduleArray) {
 
     let standardPayment = (loanAmount * monthlyRate) / (1 - ((1 + monthlyRate) ** (-1 * totalNumPayments)));
 
+    let asOfDate = new Date(JSON.parse(params.get("timestamp")));
+    let origDate = new Date(params.get("origination-date"));
+
+    let monthsElapsed = ((asOfDate.getFullYear() - origDate.getFullYear()) * 12) + (asOfDate.getMonth() - origDate.getMonth());
+    if (asOfDate.getDate() < origDate.getDate()) {
+        monthsElapsed -= 1;
+    }
+
+    let lastPaymentDate = new Date(origDate);
+    lastPaymentDate.setMonth(lastPaymentDate.getMonth() + monthsElapsed);
+
+    let nextPaymentDate = new Date(origDate);
+    nextPaymentDate.setMonth(nextPaymentDate.getMonth() + monthsElapsed + 1);
+
+    let daysSinceLastPayment = asOfDate.getDate() - lastPaymentDate.getDate();
+    let daysInPeriod = Math.floor((nextPaymentDate.getTime() - lastPaymentDate.getTime()) / (1000 * 60 * 60 * 24));
+
+    let daysUntilNextPayment = Math.floor((nextPaymentDate.getTime() - asOfDate.getTime()) / (1000 * 60 * 60 * 24));
+
+    let accrued_interest = currentBalance * (Number(params.get("interest-rate")) / 365) * daysUntilNextPayment;
+    let balance_projected = currentBalance + accrued_interest;
+
     let paymentNumbers = [];
+    let paymentDates = [];
     let beginningBalances = [];
     let monthlyInterests = [];
     let principalPayments = [];
@@ -39,8 +63,13 @@ export function calculateMortgagePayoff(params, paymentScheduleArray) {
     let cumulativeInterest = [];
 
     let i = 1;
+
+    currentBalance = balance_projected;
+    let currentDate = new Date(nextPaymentDate);
     while (currentBalance > 0.005) {
         paymentNumbers.push(i);
+
+        paymentDates.push(currentDate.toDateString());
 
         let monthlyInterest = (currentBalance * monthlyRate);
         monthlyInterests.push(monthlyInterest);
@@ -62,6 +91,7 @@ export function calculateMortgagePayoff(params, paymentScheduleArray) {
         currentBalance = endingBalance;
         cumulativeInterest.push(monthlyInterest + (cumulativeInterest.at(-1) || 0));
 
+        currentDate.setMonth(currentDate.getMonth() + 1);
         i++;
     }
 
