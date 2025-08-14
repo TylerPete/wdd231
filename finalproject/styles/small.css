@@ -487,6 +487,30 @@ input[type="checkbox"] {
     padding: 0 15px;
 }
 
+/* Debt Payoff Tools page rules */
+
+.mortgage-form {
+    margin: 10px;
+    width: 70%;
+    max-width: 600px;
+}
+
+.mortgage-form.hidden {
+    display: none;
+}
+
+.mortgage-form label {
+    display: block;
+    margin: 1rem 0;
+}
+
+.mortgage-form input {
+    display: block;
+    margin: 5px 0;
+    min-width: 200px;
+    width: 50%;
+}
+
 /*    v   v   v   v   v   v   v */
 /* To do: Add CSS ANIMATIONS for ACCOUNT TYPE CARDS on the RETIREMENT HUB PAGE */
 /*     ^   ^   ^   ^   ^   ^   ^  */
