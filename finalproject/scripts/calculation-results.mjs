@@ -48,6 +48,7 @@ export function calculateMortgagePayoff() {
 
         let monthlyInterest = (currentBalance * monthlyRate).toFixed(2);
         monthlyInterests.push(monthlyInterest);
+        console.log(`Monthly interest payment: ${monthlyInterest}`);
 
         let totalPayment = standardPayment + extraMonthlyPayment;
 
