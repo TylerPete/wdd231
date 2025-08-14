@@ -30,7 +30,7 @@ export function calculateMortgagePayoff(params, paymentScheduleArray) {
 
     let standardPayment = (loanAmount * monthlyRate) / (1 - ((1 + monthlyRate) ** (-1 * totalNumPayments)));
 
-    let asOfDate = new Date(JSON.parse(params.get("timestamp")));
+    let asOfDate = new Date(params.get("timestamp"));
     let origDate = new Date(params.get("origination-date"));
 
     let monthsElapsed = ((asOfDate.getFullYear() - origDate.getFullYear()) * 12) + (asOfDate.getMonth() - origDate.getMonth());
