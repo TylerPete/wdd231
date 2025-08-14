@@ -68,5 +68,8 @@ function copyLastEntries() {
 
         const currentBalanceInput = document.querySelector("#current-balance-input");
         currentBalanceInput.value = retrievedURLSearchParams.get("current-balance");
+
+        const interestRateInput = document.querySelector("#interest-rate-input");
+        interestRateInput.value = retrievedURLSearchParams.get("interest-rate");
     }
 }
