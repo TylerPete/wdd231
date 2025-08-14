@@ -32,8 +32,9 @@ function loadPreviousCalculation() {
         const lastParamsObject = JSON.parse(lastParamsJson);
 
         const retrievedURLSearchParams = new URLSearchParams(lastParamsObject);
+        const theTimestamp = retrievedURLSearchParams.get("timestamp");
 
-        console.log(retrievedURLSearchParams);
+        console.log(theTimestamp);
 
         const lastCalcDateAndTime = new Date(retrievedURLSearchParams.get("timestamp"));
         console.log(`Retrieved timestamp: ${retrievedURLSearchParams.get("timestamp")}`);
