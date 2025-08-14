@@ -1,8 +1,8 @@
 import { setCopyrightYear } from "./copyright-year.mjs";
 import { setUpNavigation } from "./navigation.mjs";
 
-const resultsDiv = document.querySelector("#results-div");
-let numPaymentsAccelerated;
+let originalScheduleArray = [];
+let paymentScheduleArray = [];
 
 //Input current year for copyright year
 setCopyrightYear();
@@ -15,8 +15,6 @@ function getDataFromURL() {
 
     return params;
 }
-
-// timestamp=%222025-08-14T19%3A03%3A27.809Z%22
 
 export function calculateMortgagePayoff(params, paymentScheduleArray) {
 
@@ -46,21 +44,26 @@ export function calculateMortgagePayoff(params, paymentScheduleArray) {
     let nextPaymentDate = new Date(origDate);
     nextPaymentDate.setMonth(nextPaymentDate.getMonth() + monthsElapsed + 1);
 
-    let daysSinceLastPayment = asOfDate.getDate() - lastPaymentDate.getDate();
-    let daysInPeriod = Math.floor((nextPaymentDate.getTime() - lastPaymentDate.getTime()) / (1000 * 60 * 60 * 24));
+    // let daysSinceLastPayment = Math.floor((asOfDate.getTime() - lastPaymentDate.getTime()) / (1000* 60 * 60 *24));
+    // let daysInPeriod = Math.floor((nextPaymentDate.getTime() - lastPaymentDate.getTime()) / (1000 * 60 * 60 * 24));
 
     let daysUntilNextPayment = Math.floor((nextPaymentDate.getTime() - asOfDate.getTime()) / (1000 * 60 * 60 * 24));
 
-    let accrued_interest = currentBalance * (Number(params.get("interest-rate")) / 365) * daysUntilNextPayment;
+    let accrued_interest = 0;
+    if (extraMonthlyPayment > 0) {
+        let dailyRate = (Number(params.get("interest-rate")) / 100) / 365;
+        let accrued_interest = currentBalance * dailyRate * daysUntilNextPayment;
+    }
+
     let balance_projected = currentBalance + accrued_interest;
 
-    let paymentNumbers = [];
-    let paymentDates = [];
-    let beginningBalances = [];
-    let monthlyInterests = [];
-    let principalPayments = [];
-    let endingBalances = [];
-    let cumulativeInterest = [];
+    let paymentNumbers = [];        //nested Array index 0
+    let paymentDates = [];          //nested Array index 1
+    let beginningBalances = [];     //nested Array index 2
+    let monthlyInterests = [];      //nested Array index 3
+    let principalPayments = [];     //nested Array index 4
+    let endingBalances = [];        //nested Array index 5
+    let cumulativeInterest = [];    //nested Array index 6
 
     let i = 1;
 
@@ -97,6 +100,7 @@ export function calculateMortgagePayoff(params, paymentScheduleArray) {
 
     if (paymentScheduleArray) {
         paymentScheduleArray.push(paymentNumbers);
+        paymentScheduleArray.push(paymentDates);
         paymentScheduleArray.push(beginningBalances);
         paymentScheduleArray.push(monthlyInterests);
         paymentScheduleArray.push(principalPayments);
@@ -107,9 +111,10 @@ export function calculateMortgagePayoff(params, paymentScheduleArray) {
     return cumulativeInterest.at(-1);
 }
 
-
+// Do stuff by calling functions
 let interestSaved = calculateInterestSavings();
 console.log(`Interest savings: ${interestSaved}`);
+displayResultsAndStoreInLocalStorage();
 
 export function calculateInterestSavings() {
     let params = getDataFromURL();
@@ -117,16 +122,35 @@ export function calculateInterestSavings() {
     let alteredParams = getDataFromURL();
     alteredParams.set("extra-monthly-payment-amount", "0");
 
-    let interestWouldHavePaid = calculateMortgagePayoff(alteredParams);
+    let interestWouldHavePaid = calculateMortgagePayoff(alteredParams, originalScheduleArray);
 
-    let paymentScheduleArray = [];
     let interestActuallyPaid = calculateMortgagePayoff(params, paymentScheduleArray);
 
     console.log(paymentScheduleArray);
+    console.log(originalScheduleArray);
 
     return interestWouldHavePaid - interestActuallyPaid;
 }
 
-export function displayResults() {
+export function displayResultsAndStoreInLocalStorage() {
+    const resultsDiv = document.querySelector("#results-div");
 
+    let params = getDataFromURL();
+    resultsDiv.innerHTML = `
+                            <p>Debt-Free Date: ${paymentScheduleArray[1][paymentScheduleArray[1].length - 1]}</p>
+                            <p>Total Interest Paid (from now to loan payoff): $${Number(paymentScheduleArray[6][paymentScheduleArray[6].length - 1].toFixed(2)).toLocaleString('en-US')}</p>
+                            <p>Savings on Interest: $${Number(interestSaved.toFixed(2)).toLocaleString('en-US')}</p>
+                            
+                            <hr>
+                            
+                            <p>Mortgage Details entered:</p>
+                            <ul>
+                                <li>Original Loan Amount: $${Number(Number(params.get("loan-amount")).toFixed(2)).toLocaleString('en-US')}</li>
+                                <li>Current balance: $${Number(Number(params.get("current-balance")).toFixed(2)).toLocaleString('en-US')}</li>
+                                <li>Interest rate: ${params.get("interest-rate")}%</li>
+                                <li>Origination date: ${params.get("origination-date")}</li>
+                                <li>Original term length: ${params.get("original-term-length")} years</li>
+                                <li>Extra monthly payment: $${params.get("extra-monthly-payment-amount")}</li>
+                            </ul>`;
 }
+
