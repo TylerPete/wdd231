@@ -64,7 +64,7 @@ export function calculateMortgagePayoff() {
         i++;
 
         testDownIterator--;
-        console.log(`Ending balance after payment #${paymentNumbers[i - 1]}: ${endingBalance}`);
+        console.log(`Ending balance after payment #${i}: ${endingBalance}`);
     }
 }
 
