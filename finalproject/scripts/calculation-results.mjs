@@ -61,7 +61,7 @@ export function calculateMortgagePayoff() {
         let principalPayment = totalPayment - monthlyInterest;
         principalPayments.push(principalPayment);
 
-        let endingBalance = currentBalance - principalPayment;
+        let endingBalance = (currentBalance - principalPayment).toFixed(2);
         endingBalances.push(endingBalance);
 
         currentBalance = endingBalance;
