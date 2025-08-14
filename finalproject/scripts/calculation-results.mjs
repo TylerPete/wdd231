@@ -36,10 +36,8 @@ export function calculateMortgagePayoff(params) {
     let endingBalances = [];
     let cumulativeInterest = [];
 
-    let previousCumulativeInterest = 0;
     let i = 1;
-
-    while (currentBalance > 0.01) {
+    while (currentBalance > 0.005) {
         paymentNumbers.push(i);
 
         let monthlyInterest = (currentBalance * monthlyRate);
@@ -61,27 +59,34 @@ export function calculateMortgagePayoff(params) {
         endingBalances.push(endingBalance);
 
         currentBalance = endingBalance;
-        cumulativeInterest.push(monthlyInterest + previousCumulativeInterest);
-        previousCumulativeInterest = cumulativeInterest[i - 1];
+        cumulativeInterest.push(monthlyInterest + (cumulativeInterest.at(-1) || 0));
 
         console.log(`Ending balance after payment #${i}: $${endingBalance.toFixed(2)}`);
         i++;
     }
 
-    return cumulativeInterest[cumulativeInterest.length - 1];
+    return cumulativeInterest.at(-1);
 }
 
 //Additional function calls
 getDataFromURL();
 let interestPaid = calculateMortgagePayoff(params);
+console.log(`Total interest paid: ${interestPaid}`);
+
 let interestSaved = calculateInterestSavings();
 console.log(`Interest savings: ${interestSaved}`);
 
 export function calculateInterestSavings() {
-    let alteredParams = new URLSearchParams(params.toString());
+    let alteredParams = new URLSearchParams(window.location.search);
 
     alteredParams.set("extra-monthly-payment-amount", "0");
 
     let interestWouldHavePaid = calculateMortgagePayoff(alteredParams);
-    return interestWouldHavePaid - interestPaid;
+    let interestActuallyPaid = calculateMortgagePayoff(params)
+
+    return interestWouldHavePaid - interestActuallyPaid;
+}
+
+export function displayResults() {
+
 }
