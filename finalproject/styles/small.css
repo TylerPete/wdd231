@@ -123,7 +123,7 @@ span {
 }
 
 .green-text {
-    color: var(--muted-money-green);
+    color: var(--strong-money-green);
     background-color: transparent;
 }
 

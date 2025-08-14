@@ -59,7 +59,7 @@ export function displayCards(accountTypeData) {
         });
 
         div.appendChild(icon);
-        div.appendChild(h4);
+        div.appendChild(h3);
         div.appendChild(p1);
         div.appendChild(p2);
         div.appendChild(p3);
