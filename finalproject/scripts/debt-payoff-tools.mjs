@@ -37,11 +37,9 @@ function loadPreviousCalculation() {
         console.log(theTimestamp);
 
         const lastCalcDateAndTime = new Date(retrievedURLSearchParams.get("timestamp"));
-        console.log(`Retrieved timestamp: ${retrievedURLSearchParams.get("timestamp")}`);
-        console.log(`Date object version: ${lastCalcDateAndTime}`);
 
         const previousCalcsDiv = document.querySelector("#previous-calcs-div");
-        previousCalcsDiv.innerHTML = `<p>Calculation from  </p>`;
+        previousCalcsDiv.innerHTML = `<p>Calculation from ${lastCalcDateAndTime.toString()}</p>`;
     }
 
 
