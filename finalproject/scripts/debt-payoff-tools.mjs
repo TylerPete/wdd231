@@ -22,7 +22,7 @@ submitButton.addEventListener("click", () => {
     // }
     // const dateTimeNowString = new Intl.DateTimeFormat("en-us", options).format(dateTimeNow);
 
-    hiddenTimestampInput.value = JSON.stringify(dateTimeNow);
+    hiddenTimestampInput.value = dateTimeNow.toISOString();
 });
 
 function loadPreviousCalculation() {
