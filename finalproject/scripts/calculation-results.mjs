@@ -152,5 +152,7 @@ export function displayResultsAndStoreInLocalStorage() {
                                 <li>Original term length: ${params.get("original-term-length")} years</li>
                                 <li>Extra monthly payment: $${params.get("extra-monthly-payment-amount")}</li>
                             </ul>`;
+
+    window.localStorage.setItem("lastParams", JSON.stringify(Object.fromEntries(params.entries())));
 }
 

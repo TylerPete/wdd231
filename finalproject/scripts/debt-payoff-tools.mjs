@@ -10,12 +10,6 @@ setCopyrightYear();
 //Make hamburger button navigation function
 setUpNavigation();
 
-
-
-//CHANGE THIS FOR EASIER RECREATION OF A DATE OBJECT WHEN READING 
-// URLSearchParams on the results page!!! Need to implement Date math to
-// determine the date of the next payment, add a "Payment Dates" array into
-// the calculation, 
 submitButton.addEventListener("click", () => {
     const dateTimeNow = new Date();
 
@@ -30,3 +24,23 @@ submitButton.addEventListener("click", () => {
 
     hiddenTimestampInput.value = JSON.stringify(dateTimeNow);
 });
+
+function loadPreviousCalculation() {
+    const lastParamsJson = window.localStorage.getItem("lastParams");
+
+    if (lastParamsJson) {
+        const lastParamsObject = JSON.parse(lastParamsJson);
+
+        const retrievedURLSearchParams = new URLSearchParams(lastParamsObject);
+
+        console.log(retrievedURLSearchParams);
+    }
+
+    const lastCalcDateAndTime = new Date(retrievedURLSearchParams.get("timestamp"));
+    console.log(`Retrieved timestamp: ${lastCalcDateAndTime}`);
+
+    const previousCalcsDiv = document.querySelector("#previous-calcs-div");
+    previousCalcsDiv.innerHTML = `<p>Calculation from  </p>`;
+}
+
+loadPreviousCalculation();
