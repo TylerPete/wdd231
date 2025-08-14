@@ -511,6 +511,17 @@ input[type="checkbox"] {
     width: 50%;
 }
 
+.results-heading {
+    margin: 5px 10px;
+}
+
+#return-button {
+    font-size: 12px;
+    color: #0000EE;
+    margin: 0 0 10px 10px;
+    cursor: pointer;
+}
+
 /*    v   v   v   v   v   v   v */
 /* To do: Add CSS ANIMATIONS for ACCOUNT TYPE CARDS on the RETIREMENT HUB PAGE */
 /*     ^   ^   ^   ^   ^   ^   ^  */
