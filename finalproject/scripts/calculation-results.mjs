@@ -2,7 +2,7 @@ import { setCopyrightYear } from "./copyright-year.mjs";
 import { setUpNavigation } from "./navigation.mjs";
 
 const resultsDiv = document.querySelector("#results-div");
-let params;
+let numPaymentsAccelerated;
 
 //Input current year for copyright year
 setCopyrightYear();
@@ -11,12 +11,14 @@ setCopyrightYear();
 setUpNavigation();
 
 function getDataFromURL() {
-    params = new URLSearchParams(window.location.search);
+    let params = new URLSearchParams(window.location.search);
+
+    return params;
 }
 
 // timestamp
 
-export function calculateMortgagePayoff(params) {
+export function calculateMortgagePayoff(params, paymentScheduleArray) {
     let loanAmount = Number(params.get("loan-amount"));
 
     let currentBalance = Number(params.get("current-balance"));
@@ -28,7 +30,6 @@ export function calculateMortgagePayoff(params) {
     let totalNumPayments = Number(params.get("original-term-length")) * 12;
 
     let standardPayment = (loanAmount * monthlyRate) / (1 - ((1 + monthlyRate) ** (-1 * totalNumPayments)));
-    console.log(`Standard monthly payment: ${standardPayment}`);
 
     let paymentNumbers = [];
     let beginningBalances = [];
@@ -43,7 +44,6 @@ export function calculateMortgagePayoff(params) {
 
         let monthlyInterest = (currentBalance * monthlyRate);
         monthlyInterests.push(monthlyInterest);
-        //
 
         let totalPayment = standardPayment + extraMonthlyPayment;
 
@@ -62,28 +62,37 @@ export function calculateMortgagePayoff(params) {
         currentBalance = endingBalance;
         cumulativeInterest.push(monthlyInterest + (cumulativeInterest.at(-1) || 0));
 
-        // console.log(`Ending balance after payment #${i}: $${endingBalance.toFixed(2)}`);
         i++;
+    }
+
+    if (paymentScheduleArray) {
+        paymentScheduleArray.push(paymentNumbers);
+        paymentScheduleArray.push(beginningBalances);
+        paymentScheduleArray.push(monthlyInterests);
+        paymentScheduleArray.push(principalPayments);
+        paymentScheduleArray.push(endingBalances);
+        paymentScheduleArray.push(cumulativeInterest);
     }
 
     return cumulativeInterest.at(-1);
 }
 
-//Additional function calls
-getDataFromURL();
-let interestPaid = calculateMortgagePayoff(params);
-console.log(`Total interest paid: ${interestPaid}`);
 
 let interestSaved = calculateInterestSavings();
 console.log(`Interest savings: ${interestSaved}`);
 
 export function calculateInterestSavings() {
-    let alteredParams = new URLSearchParams(window.location.search);
+    let params = getDataFromURL();
 
+    let alteredParams = getDataFromURL();
     alteredParams.set("extra-monthly-payment-amount", "0");
 
     let interestWouldHavePaid = calculateMortgagePayoff(alteredParams);
-    let interestActuallyPaid = calculateMortgagePayoff(params)
+
+    let paymentScheduleArray = [];
+    let interestActuallyPaid = calculateMortgagePayoff(params, paymentScheduleArray);
+
+    console.log(paymentScheduleArray);
 
     return interestWouldHavePaid - interestActuallyPaid;
 }
