@@ -39,7 +39,7 @@ function loadPreviousCalculation() {
         const lastCalcDateAndTime = new Date(retrievedURLSearchParams.get("timestamp"));
 
         const previousCalcsDiv = document.querySelector("#previous-calcs-div");
-        previousCalcsDiv.innerHTML = `<p>Calculation from ${lastCalcDateAndTime.toString()}</p>`;
+        previousCalcsDiv.innerHTML = `<p>Calculation from ${lastCalcDateAndTime.toLocaleDateString()}</p>`;
     }
 
 
