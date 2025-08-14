@@ -12,26 +12,22 @@ setUpNavigation();
 
 function getDataFromURL() {
     params = new URLSearchParams(window.location.search);
-
-    calculateMortgagePayoff();
 }
 
-// loan-amount & current-balance & interest-rate &
-// origination-date & original-term-length &
-// extra-monthly-payment-amount & timestamp
+// timestamp
 
-export function calculateMortgagePayoff() {
-    let loanAmount = params.get("loan-amount");
+export function calculateMortgagePayoff(params) {
+    let loanAmount = Number(params.get("loan-amount"));
 
-    let currentBalance = params.get("current-balance");
+    let currentBalance = Number(params.get("current-balance"));
 
-    let extraMonthlyPayment = params.get("extra-monthly-payment-amount");
+    let extraMonthlyPayment = Number(params.get("extra-monthly-payment-amount"));
 
-    let monthlyRate = (params.get("interest-rate") / 100) / 12;
+    let monthlyRate = Number(params.get("interest-rate")) / 100 / 12;
 
-    let totalNumPayments = params.get("original-term-length") * 12;
+    let totalNumPayments = Number(params.get("original-term-length")) * 12;
 
-    let standardPayment = ((loanAmount * monthlyRate) / (1 - ((1 + monthlyRate) ** (-1 * totalNumPayments)))).toFixed(2);
+    let standardPayment = (loanAmount * monthlyRate) / (1 - ((1 + monthlyRate) ** (-1 * totalNumPayments)));
 
     let paymentNumbers = [];
     let beginningBalances = [];
@@ -46,9 +42,9 @@ export function calculateMortgagePayoff() {
     while (currentBalance > 0.01) {
         paymentNumbers.push(i);
 
-        let monthlyInterest = (currentBalance * monthlyRate).toFixed(2);
+        let monthlyInterest = (currentBalance * monthlyRate);
         monthlyInterests.push(monthlyInterest);
-        console.log(`Monthly interest payment: ${monthlyInterest}`);
+        console.log(`Monthly interest payment: $${monthlyInterest.toFixed(2)}`);
 
         let totalPayment = standardPayment + extraMonthlyPayment;
 
@@ -61,16 +57,31 @@ export function calculateMortgagePayoff() {
         let principalPayment = totalPayment - monthlyInterest;
         principalPayments.push(principalPayment);
 
-        let endingBalance = (currentBalance - principalPayment).toFixed(2);
+        let endingBalance = (currentBalance - principalPayment);
         endingBalances.push(endingBalance);
 
         currentBalance = endingBalance;
         cumulativeInterest.push(monthlyInterest + previousCumulativeInterest);
         previousCumulativeInterest = cumulativeInterest[i - 1];
 
-        console.log(`Ending balance after payment #${i}: ${endingBalance}`);
+        console.log(`Ending balance after payment #${i}: $${endingBalance.toFixed(2)}`);
         i++;
     }
+
+    return cumulativeInterest[cumulativeInterest.length - 1];
 }
 
+//Additional function calls
 getDataFromURL();
+let interestPaid = calculateMortgagePayoff(params);
+let interestSaved = calculateInterestSavings();
+console.log(`Interest savings: ${interestSaved}`);
+
+export function calculateInterestSavings() {
+    let alteredParams = new URLSearchParams(params.toString());
+
+    alteredParams.set("extra-monthly-payment-amount", "0");
+
+    let interestWouldHavePaid = calculateMortgagePayoff(alteredParams);
+    return interestWouldHavePaid - interestPaid;
+}
