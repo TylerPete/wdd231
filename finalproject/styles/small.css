@@ -148,7 +148,7 @@ span {
 }
 
 h2 {
-    margin-left: 10px;
+    margin: 20px 10px;
 }
 
 .hero-div h2 {
@@ -158,7 +158,7 @@ h2 {
 
 p {
     color: var(--text-dark-gray);
-    margin: 15px 15px 10px 15px;
+    margin: 15px 15px 15px 15px;
 }
 
 .hero-div p {
@@ -328,7 +328,7 @@ footer p {
 /* Retirement Hub page rules */
 
 h1 {
-    margin: 0;
+    margin-top: 0;
     padding: 20px 0px 0px 10px;
 }
 
