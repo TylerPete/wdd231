@@ -50,7 +50,7 @@ export function calculateMortgagePayoff() {
         beginningBalances.push(currentBalance);
 
         let monthlyInterest = currentBalance * monthlyRate;
-        // monthlyInterests.push(monthlyInterest);
+        monthlyInterests.push(monthlyInterest);
 
         let principalPayment = standardPayment + extraMonthlyPayment - monthlyInterest;
         principalPayments.push(principalPayment);
