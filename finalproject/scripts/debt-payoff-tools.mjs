@@ -42,7 +42,7 @@ function loadPreviousCalculation() {
         previousCalcsDiv.innerHTML = `<p>Calculation from ${lastCalcDateAndTime.toLocaleDateString()}</p>
                                       <p>Current Balance: $${Number(Number(retrievedURLSearchParams.get("current-balance")).toFixed(2)).toLocaleString('en-US')}</p>
                                       <p>Extra monthly payment: $${retrievedURLSearchParams.get("extra-monthly-payment-amount")}</p>
-                                      <button id="copy-last-entries">Edit</button>`;
+                                      <button id="copy-last-entries">Copy</button>`;
 
         const copyButton = document.querySelector("#copy-last-entries");
         copyButton.addEventListener("click", () => {
@@ -71,5 +71,13 @@ function copyLastEntries() {
 
         const interestRateInput = document.querySelector("#interest-rate-input");
         interestRateInput.value = retrievedURLSearchParams.get("interest-rate");
+
+        const originationDateInput = document.querySelector("#origination-date-input");
+        originationDateInput.value = retrievedURLSearchParams.get("origination-date");
+
+        
+
+        const extraMonthlyPaymentInput = document.querySelector("#extra-monthly-payment-amount-input");
+        extraMonthlyPaymentInput.value = retrievedURLSearchParams.get("extra-monthly-payment-amount");
     }
 }
