@@ -44,8 +44,6 @@ export function calculateMortgagePayoff(params, paymentScheduleArray) {
     let nextPaymentDate = new Date(origDate);
     nextPaymentDate.setMonth(nextPaymentDate.getMonth() + monthsElapsed + 1);
 
-    // let daysSinceLastPayment = Math.floor((asOfDate.getTime() - lastPaymentDate.getTime()) / (1000* 60 * 60 *24));
-    // let daysInPeriod = Math.floor((nextPaymentDate.getTime() - lastPaymentDate.getTime()) / (1000 * 60 * 60 * 24));
 
     let daysUntilNextPayment = Math.floor((nextPaymentDate.getTime() - asOfDate.getTime()) / (1000 * 60 * 60 * 24));
 

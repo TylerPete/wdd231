@@ -542,6 +542,18 @@ input[type="checkbox"] {
     margin-top: 10px;
 }
 
-/*    v   v   v   v   v   v   v */
-/* To do: Add CSS ANIMATIONS for ACCOUNT TYPE CARDS on the RETIREMENT HUB PAGE */
-/*     ^   ^   ^   ^   ^   ^   ^  */
+#previous-calcs-div {
+    border: 1px solid var(--text-dark-gray);
+    border-radius: 5px;
+    margin: 10px;
+    width: fit-content;
+}
+
+#copy-last-entries {
+    font-size: 15px;
+    color: #0000EE;
+    margin: 0 0 20px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
