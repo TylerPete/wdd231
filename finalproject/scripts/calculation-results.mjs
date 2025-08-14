@@ -31,7 +31,7 @@ export function calculateMortgagePayoff() {
 
     let totalNumPayments = params.get("original-term-length") * 12;
 
-    let standardPayment = (loanAmount * monthlyRate) / (1 - ((1 + monthlyRate) ** (-1 * totalNumPayments)));
+    let standardPayment = ((loanAmount * monthlyRate) / (1 - ((1 + monthlyRate) ** (-1 * totalNumPayments)))).toFixed(2);
 
     let paymentNumbers = [];
     let beginningBalances = [];
