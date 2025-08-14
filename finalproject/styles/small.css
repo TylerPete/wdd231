@@ -393,7 +393,7 @@ input[type="checkbox"] {
     margin: 10px;
 }
 
-.account-card h4 {
+.account-card h3 {
     margin-top: 10px;
     grid-column: 2 / 3;
     justify-self: start;

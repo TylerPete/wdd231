@@ -37,8 +37,8 @@ export function displayCards(accountTypeData) {
         icon.loading = "lazy";
         icon.src = `images/${account.image_filename}`;
 
-        const h4 = document.createElement("h4");
-        h4.textContent = account.account_type;
+        const h3 = document.createElement("h3");
+        h3.textContent = account.account_type;
 
         const p1 = document.createElement("p");
         p1.textContent = `Contribution: ${account.contribution_tax_treatment}`;
