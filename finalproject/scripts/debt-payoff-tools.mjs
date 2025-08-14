@@ -34,13 +34,15 @@ function loadPreviousCalculation() {
         const retrievedURLSearchParams = new URLSearchParams(lastParamsObject);
 
         console.log(retrievedURLSearchParams);
+
+        const lastCalcDateAndTime = new Date(retrievedURLSearchParams.get("timestamp"));
+        console.log(`Retrieved timestamp: ${lastCalcDateAndTime}`);
+
+        const previousCalcsDiv = document.querySelector("#previous-calcs-div");
+        previousCalcsDiv.innerHTML = `<p>Calculation from  </p>`;
     }
 
-    const lastCalcDateAndTime = new Date(retrievedURLSearchParams.get("timestamp"));
-    console.log(`Retrieved timestamp: ${lastCalcDateAndTime}`);
 
-    const previousCalcsDiv = document.querySelector("#previous-calcs-div");
-    previousCalcsDiv.innerHTML = `<p>Calculation from  </p>`;
 }
 
 loadPreviousCalculation();
