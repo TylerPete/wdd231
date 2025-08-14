@@ -11,12 +11,16 @@ const employerEitherRadio = document.querySelector("#employer-either");
 export async function getAccountTypeData() {
     const url = "https://raw.githubusercontent.com/TylerPete/wdd231/main/finalproject/data/retirement-account-data.json";
 
-    const response = await fetch(url);
-    const data = await response.json();
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
 
-    allAccounts = data;
+        allAccounts = data;
 
-    displayCards(allAccounts);
+        displayCards(allAccounts);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 export function displayCards(accountTypeData) {
