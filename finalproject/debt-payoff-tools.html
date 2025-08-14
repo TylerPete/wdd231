@@ -73,9 +73,25 @@
                         name="interest-rate" required></label>
                 <label for="origination-date-input">Origination Date: <input type="date" id="origination-date-input"
                         name="origination-date" required></label>
+                <label for="original-term-length-select">Original Term Length:
+                    <select id="original-term-length-select" name="original-term-length" required>
+                        <option value="" selected disabled>--Please choose an option--</option>
+                        <option value="10">10 years</option>
+                        <option value="15">15 years</option>
+                        <option value="20">20 years</option>
+                        <option value="25">25 years</option>
+                        <option value="30">30 years</option>
+                        <option value="35">35 years</option>
+                        <option value="40">40 years</option>
+                        <option value="45">45 years</option>
+                        <option value="50">50 years</option>
+                    </select>
+                </label>
                 <label for="extra-monthly-payment-amount-input">Extra Monthly Payment Amount: <input type="text"
                         id="extra-monthly-payment-amount-input" name="extra-monthly-payment-amount" required></label>
-                <button type="submit"></button>
+
+                <input type="hidden"> <!-- TIMESTAMP HERE -->
+                <button type="submit" id="submit-button" class="green-button">Calculate</button>
             </fieldset>
         </form>
 
