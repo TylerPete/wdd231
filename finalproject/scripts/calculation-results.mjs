@@ -43,16 +43,21 @@ export function calculateMortgagePayoff() {
     let previousCumulativeInterest = 0;
     let i = 1;
 
-    let testDownIterator = 15;
     while (currentBalance > 0.01) {
         paymentNumbers.push(i);
-
-        beginningBalances.push(currentBalance);
 
         let monthlyInterest = currentBalance * monthlyRate;
         monthlyInterests.push(monthlyInterest);
 
-        let principalPayment = standardPayment + extraMonthlyPayment - monthlyInterest;
+        let totalPayment = standardPayment + extraMonthlyPayment;
+
+        if (totalPayment > currentBalance + monthlyInterest) {
+            totalPayment = currentBalance + monthlyInterest;
+        }
+
+        beginningBalances.push(currentBalance);
+
+        let principalPayment = totalPayment - monthlyInterest;
         principalPayments.push(principalPayment);
 
         let endingBalance = currentBalance - principalPayment;
@@ -61,10 +66,9 @@ export function calculateMortgagePayoff() {
         currentBalance = endingBalance;
         cumulativeInterest.push(monthlyInterest + previousCumulativeInterest);
         previousCumulativeInterest = cumulativeInterest[i - 1];
-        i++;
 
-        testDownIterator--;
         console.log(`Ending balance after payment #${i}: ${endingBalance}`);
+        i++;
     }
 }
 
