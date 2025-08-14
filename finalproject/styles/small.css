@@ -507,15 +507,17 @@ input[type="checkbox"] {
 .mortgage-form input {
     display: block;
     margin: 5px 0;
-    min-width: 200px;
+    min-width: 235px;
     width: 50%;
+    padding: 3px;
 }
 
 .mortgage-form select {
     display: block;
     margin: 5px 0;
-    min-width: 200px;
+    min-width: 235px;
     width: 50%;
+    padding: 3px;
 }
 
 .results-heading {
